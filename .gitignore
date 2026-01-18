@@ -65,7 +65,6 @@ rerun_*.log
 run_*.sh
 
 # New results (use results/ for final)
-results_new/
 
 .ipynb_checkpoints/
 *.ipynb
