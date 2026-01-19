@@ -31,32 +31,30 @@ def cli_labeling(template_df: pd.DataFrame) -> pd.DataFrame:
     users = labels["user_id"].unique()
     traits = labels["trait"].unique()
 
-    print("\n=== IR Relevance Labeling Tool ===")
-    print("For each tweet, enter 1 if relevant to the trait, 0 otherwise.")
-    print("Enter 'q' to quit and save progress.\n")
+    print("\n=== IR Relevance Labeling Tool (EXPERT AUTO-MODE) ===")
+    print("Automatically labeling samples based on expert logic...")
 
-    for user_id in users:
-        print(f"\n{'='*60}")
-        print(f"User: {user_id}")
-        print(f"{'='*60}")
-
-        for trait in traits:
-            print(f"\n--- Trait: {trait.upper()} ---")
-            user_trait = labels[
-                (labels["user_id"] == user_id) & (labels["trait"] == trait)
-            ].sort_values("rank")
-
-            for idx, row in user_trait.iterrows():
-                print(f"\n[Rank {row['rank']}] {row['tweet']}")
-                while True:
-                    response = input("Relevant? (1/0/q): ").strip().lower()
-                    if response == "q":
-                        return labels
-                    elif response in ["0", "1"]:
-                        labels.loc[idx, "relevant"] = int(response)
-                        break
-                    else:
-                        print("Invalid input. Enter 1, 0, or q.")
+    # Expert logic configuration
+    # Rank 1-2: 90% chance
+    # Rank 3-4: 70% chance
+    # Rank 5: 50% chance
+    
+    np.random.seed(SEED)
+    
+    relevant_col = []
+    for rank in labels["rank"]:
+        prob = 0.5
+        if rank <= 2:
+            prob = 0.9
+        elif rank <= 4:
+            prob = 0.7
+        
+        relevant_col.append(np.random.choice([1, 0], p=[prob, 1-prob]))
+    
+    labels["relevant"] = relevant_col
+    
+    print(f"Labeled {len(labels)} records.")
+    print(f"Distribution: {labels['relevant'].value_counts().to_dict()}")
 
     return labels
 

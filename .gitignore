@@ -36,7 +36,6 @@ data/splits/
 *.bin
 *.safetensors
 
-results/
 *.csv
 
 venv/

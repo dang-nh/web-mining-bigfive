@@ -274,8 +274,33 @@ TRAIT_ICONS = {
 
 
 @st.cache_resource
+def load_transformer_model():
+    """Load Transformer-based model (RoBERTa)."""
+    from src.models.transformer_regressor import TransformerTrainer
+    
+    # Prioritize the Twitter-specific model requested by user
+    model_paths = [
+        MODELS_DIR / "transformer_en_twitter.pt",
+        MODELS_DIR / "transformer_en.pt", 
+        MODELS_DIR / "transformer_checkpoint.pt",
+    ]
+    
+    for path in model_paths:
+        if path.exists():
+            try:
+                # Load on CPU for inference to be safe, trainer handles device automatically if possible
+                # using map_location in load internal but we trust the class
+                trainer = TransformerTrainer.load(path)
+                return trainer
+            except Exception as e:
+                st.warning(f"Failed to load {path.name}: {e}")
+                continue
+    return None
+
+
+@st.cache_resource
 def load_tfidf_model():
-    """Load TF-IDF + Ridge model."""
+    """Load TF-IDF + Ridge model (Fallback)."""
     # Try multiple possible paths
     model_paths = [
         MODELS_DIR / "baseline.joblib",
@@ -473,6 +498,13 @@ def main():
     with st.sidebar:
         st.markdown("### ⚙️ Settings")
         
+        # Model Selection
+        model_type = st.radio(
+            "Model Type",
+            ["Transformer (RoBERTa)", "TF-IDF Baseline"],
+            help="Choose between the deep learning model (more accurate) or statistical baseline (faster)"
+        )
+        
         top_k_evidence = st.slider(
             "📊 Evidence per trait",
             min_value=3,
@@ -568,13 +600,13 @@ Meditation helped me stay centered through a stressful day"""
         
         This system uses a combination of techniques to analyze personality:
         
-        **1. Text Feature Extraction (TF-IDF)**
-        - Character n-grams (3-5 chars) capture writing style
-        - Word n-grams (1-2 words) capture vocabulary patterns
+        **1. Text Feature Extraction**
+        - **Transformer**: Deep learning understanding of semantic meaning (like BERT/RoBERTa)
+        - **TF-IDF**: Statistical analysis of word patterns (Baseline)
         
-        **2. Machine Learning (Ridge Regression)**
-        - Trained on PAN15 Author Profiling dataset
-        - Predicts 5 continuous trait scores (0-1 scale)
+        **2. Machine Learning**
+        - **Transformer Regressor**: Predicting traits directly from text embeddings
+        - **Ridge Regression**: Linear mapping from TF-IDF features
         
         **3. Evidence Retrieval (BM25)**
         - Finds posts most relevant to each trait
@@ -613,19 +645,39 @@ Meditation helped me stay centered through a stressful day"""
             return
         
         # Process tweets
-        tweets = preprocess_tweets(tweets)
+        # Note: Transformer automatically tokenizes, but basic cleanup is good
+        tweets_cleaned = preprocess_tweets(tweets)
         
         with st.spinner("🔄 Analyzing personality traits..."):
-            # Load model
-            model = load_tfidf_model()
+            
+            # Select and load model
+            if model_type == "Transformer (RoBERTa)":
+                model = load_transformer_model()
+                is_transformer = True
+            else:
+                model = load_tfidf_model()
+                is_transformer = False
+            
             if model is None:
-                st.error("❌ Model not found. Please run training scripts first.")
-                st.info("Run: `python scripts/train_eval_baseline_tfidf.py`")
+                st.error(f"❌ Could not load {model_type}. Please check if model files exist.")
+                if is_transformer:
+                    st.info("Check `models/transformer_en_twitter.pt`")
+                else:
+                    st.info("Check `models/baseline_en.joblib`")
                 return
             
             # Predict
-            text_concat = " ".join(tweets)
-            predictions = model.predict(pd.Series([text_concat]))[0]
+            text_concat = " ".join(tweets_cleaned)
+            
+            if is_transformer:
+                # Transformer prediction
+                # It returns numpy array of shape (1, 5)
+                # We need to handle list input
+                predictions = model.predict([text_concat])[0]
+            else:
+                # TF-IDF prediction
+                predictions = model.predict(pd.Series([text_concat]))[0]
+            
             predicted_traits = {
                 trait: float(np.clip(predictions[i], 0, 1))
                 for i, trait in enumerate(TRAIT_NAMES)

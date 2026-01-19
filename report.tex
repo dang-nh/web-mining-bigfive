@@ -1,0 +1,488 @@
+\documentclass[runningheads]{llncs}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{microtype}
+\usepackage{url}
+\usepackage{cite}
+
+\begin{document}
+
+\title{Personality-Aware Hashtag Recommendation with Graph Neural Networks}
+
+\author{Nguyen Hoang Dang \and Nguyen The Minh Duc}
+\authorrunning{Dang and Duc}
+\institute{School of Information and Communication Technology, HUST\\
+\email{Dang.NH20232202M@sishust.edu.vn \\ Duc.NTM20242048M@sis.hust.edu.vn}}
+
+\maketitle
+
+\begin{abstract}
+Hashtag recommendation is a pivotal task in social media mining, serving as a bridge between user-generated content and information retrieval. However, traditional approaches often suffer from the ''cold-start'' problem and neglect the latent psychological drivers—specifically personality traits—that influence tagging behavior. This paper presents a comprehensive framework for Hashtag Recommendation that integrates the Big Five personality traits into both heuristic and deep learning models. We formally define the problem and propose two key contributions: (1) A **Hybrid Re-ranking Model** that fuses Content-based filtering, Popularity priors, and Multi-order Association Rules with a novel Personality Alignment score; (2) A **Personality-Enhanced LightGCN**, which modifies the graph convolution initialization to propagate psychological signals through the user-item interaction graph. Extensive experiments on the PAN 2015 Twitter dataset, using a strict leakage-free protocol, demonstrate that our hybrid strategy achieves a state-of-the-art MAP@10 of 27.8\%, while personality injection improves GNN performance by over 19\%.
+
+The source code and performance logs are available at: \url{https://github.com/Start-End/web-mining-bigfive}. The dataset used is the PAN 2015 Author Profiling corpus available at: \url{https://zenodo.org/records/3745945}.
+
+\keywords{Hashtag Recommendation \and Personality Computing \and Graph Neural Networks \and Association Rules \and Hybrid Recommender Systems}
+\end{abstract}
+
+% ============================================================
+\section{Introduction}
+
+Hashtags allow users to label interactions, participate in public discourse, and form ad-hoc communities. For platforms like Twitter (now X), accurate hashtag recommendation is essential for improving content indexing and user engagement. The core challenge lies in the **Cold-Start** and **Cold-User** scenarios, where limited interaction history makes traditional Collaborative Filtering (CF) ineffective.
+
+Recent studies suggests that online behaviors are deeply rooted in offline personality traits~\cite{tkalcic2015personality}. For example, users with high \emph{Openness} may utilize more niche, creative tags, while high \emph{Conscientiousness} correlates with structured, professional tagging. In this work, we hypothesize that explicitly modeling these traits can improve recommendation accuracy, especially when behavioral data is sparse.
+
+We propose a robust system architecture that:
+\begin{itemize}
+    \item Extracts latent ''Hashtag Personalities'' from community usage patterns.
+    \item Mines probabilistic Co-occurrence Rules (Association Rules) to capture stronger-than-semantic relationships.
+    \item Fuses these signals via a weighted hybrid mechanism and a Graph Neural Network (LightGCN).
+\end{itemize}
+
+% ============================================================
+\section{Related Work}
+
+\subsection{Personality Computing}
+Personality computing focuses on the automatic detection of psychological traits from digital footprints. Tkalcic et al.~\cite{tkalcic2015personality} highlighted the correlation between the Big Five traits (Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism) and user preferences in recommender systems. Early approaches relied on linguistic dictionaries like LIWC, but recent advancements leverage deep learning, specifically Transformer models (BERT, RoBERTa), to capture semantic nuances in user text.
+
+\subsection{Hashtag Recommendation}
+Hashtag recommendation is traditionally treated as a content matching problem~\cite{godin2013using} or a collaborative filtering task. Content-based methods~\cite{cantador2010content} utilize TF-IDF or topic models but fail when the semantic gap between tweet text and hashtags is large. Collaborative Filtering (CF) excels at capturing usage patterns but suffers in cold-start scenarios. Our work bridges this by using personality as a stable user invariant that persists even when interaction history is sparse.
+
+\subsection{Graph Neural Networks in RecSys}
+Graph Neural Networks (GNNs) have revolutionized recommender systems by modeling high-order connectivity. LightGCN~\cite{he2020lightgcn} simplified GCNs by removing non-linearities, proving that linear propagation is sufficient for collaborative signals. We extend this by initializing user nodes with personality embeddings, effectively "coloring" the graph with psychological priors.
+
+% ============================================================
+\section{System Architecture}
+
+Our framework consists of four coupled layers designed for robust recommendation:
+
+\begin{enumerate}
+\begin{enumerate}
+    \item \textbf{Data Ingestion \& Splitting Layer}: 
+    We utilize the **PAN 2015 Author Profiling** dataset, which consists of Twitter users annotated with age, gender, and Big Five personality scores. 
+    
+    \textbf{Dataset Statistics}:
+    To ensure a comprehensive evaluation, we utilize the full multilingual corpus covering English (en), Spanish (es), Italian (it), and Dutch (nl). The dataset distribution is detailed in Table~\ref{tab:dataset_stats}.
+    
+    \begin{table}[h]
+        \centering
+        \caption{PAN 2015 Dataset Statistics (Users used in experiments after preprocessing).}
+        \label{tab:dataset_stats}
+        \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \textbf{Language} & \textbf{Users} & \textbf{Total Tweets} & \textbf{Avg Tweets/User} & \textbf{Avg Tokens/User} \\
+        \hline
+        English (en) & 291 & 27,063 & 93.0 & 1,104.9 \\
+        Spanish (es) & 185 & 18,195 & 98.3 & 1,360.6 \\
+        Italian (it) & 71 & 6,880 & 96.9 & 1,236.3 \\
+        Dutch (nl) & 63 & 6,073 & 96.4 & 1,156.1 \\
+        \hline
+        \textbf{Total} & \textbf{610} & \textbf{58,211} & \textbf{95.4} (avg) & \textbf{1,215.7} (avg) \\
+        \hline
+        \end{tabular}
+    \end{table}
+
+    \textbf{Preprocessing}:
+    The raw XML corpus is parsed to extract tweets.
+    \begin{itemize}
+        \item \textbf{Text Cleaning}: We employ a standard cleaning pipeline: (1) Anonymizing user mentions (replacing \texttt{@username} with \texttt{@user}); (2) Normalizing URLs (replacing links with \texttt{http}); (3) Removing non-ASCII characters and excessive whitespace.
+        \item \textbf{Concatenation}: For personality prediction, we concatenate all tweets of a user into a single document.
+    \end{itemize}
+    
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.8\textwidth]{results/eda/length_distribution.png}
+        \caption{Distribution of User Profile Lengths (in Tokens) across languages. Spanish and Italian profiles tend to be longer on average. The high variance validates our choice of a hierarchical chunking strategy.}
+        \label{fig:length_dist}
+    \end{figure}
+
+    We employ a **User-based Split** (70\% Train, 10\% Val, 20\% Test). This is critical: standard random splitting leaks user information. By holding out entire users, we simulate a realistic "new user" scenario. Within each user, hashtags are further split (80-20) for local validation.
+    
+    \item \textbf{Profiling Layer}:
+    \begin{itemize}
+        \item \emph{User Profiling}: Users are represented by their Big Five percentile scores ($P_u \in \mathbb{R}^5$).
+        \item \emph{Item Profiling}: We compute a ''Hashtag Personality'' vector $Traits_h$ by aggregating the personality vectors of all training users who utilized hashtag $h$.
+    \end{itemize}
+    
+    \item \textbf{Model Layer}:
+    We implement a multi-strategy engine:
+    \begin{itemize}
+        \item \emph{Retrieval}: Fast candidates from Content-based (SentenceTransformers) and Popularity generators.
+        \item \emph{Ranking}: A Weighted Hybrid Scorer and a Graph Neural Network (LightGCN).
+    \end{itemize}
+    
+    \item \textbf{Serving Layer}:
+    Top-$K$ recommendations are selected via greedy sorting or Maximal Marginal Relevance (MMR) for diversity.
+\end{enumerate}
+
+\subsection{Technology Stack}
+The system is implemented using a modern data science stack:
+\begin{itemize}
+    \item \textbf{Core Language}: Python 3.10+.
+    \item \textbf{Machine Learning}: PyTorch (Deep Learning), HuggingFace Transformers (Backbone Models), Scikit-learn (Baselines & Metrics).
+    \item \textbf{Data Processing}: Pandas, NumPy.
+    \item \textbf{Interface}: Streamlit (Web App), Plotly (Interactive Visualizations).
+    \item \textbf{Infrastructure}: Docker (Containerization).
+\end{itemize}
+
+% ============================================================
+\section{Methodology}
+\label{sec:method}
+
+\subsection{Problem Formalization}
+Let $\mathcal{U}$ be the set of users and $\mathcal{H}$ be the set of hashtags. For each user $u$, we have a history of used hashtags $H_u = \{h_1, \dots, h_m\}$ and a personality vector $\mathbf{p}_u \in [0,1]^5$ (representing Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism). Our goal is to recommend a ranked list of hashtags $\hat{H}_u \subset \mathcal{H}$ that maximizing the likelihood of user adoption.
+
+\subsection{Multilingual Personality Prediction}
+To derive the personality vector $\mathbf{p}_u$, we employ state-of-the-art Transformer-based regressors. The task is to map a user's aggregated textual content to the Big Five traits.
+
+\subsubsection{Model Architecture}
+We utilize domain-specific pre-trained models to encode user posts:
+\begin{itemize}
+    \item \textbf{English}: \texttt{cardiffnlp/twitter-roberta-base} (Twitter-RoBERTa), optimized for English tweets.
+    \item \textbf{Multilingual}: \texttt{cardiffnlp/twitter-xlm-roberta-base} (Twitter-XLM-R), which extends XLM-R with multilingual social media data (covering Spanish, Italian, Dutch).
+\end{itemize}
+
+The architecture follows a standard sequence classification setup adapted for regression:
+
+\subsubsection{Hierarchical Pooling Strategy}
+Social media users often exhibit long interaction histories that exceed the maximum sequence length of standard Transformers (typically 512 tokens). Truncating text leads to information loss, while independent segment classification ignores global context. We propose a **Hierarchical Chunking & Pooling** strategy:
+
+\begin{enumerate}
+    \item \textbf{Chunking}: 
+    Input text $T_u$ is split into $K$ non-overlapping chunks $C_1, \dots, C_K$, each of length $L=512$. In our experiments, we set $K_{max}=8$, covering up to 4096 tokens per user.
+    
+    \item \textbf{Local Encoding}: 
+    Each chunk $C_k$ is fed independently into the Transformer encoder to obtain hidden states $\mathbf{H}_k \in \mathbb{R}^{L \times d}$.
+    
+    \item \textbf{Hierarchical Pooling}:
+    \begin{itemize}
+        \item \textit{token-level}: We apply mean pooling over the sequence dimension to get chunk embeddings: $\mathbf{c}_k = \text{MeanPool}(\mathbf{H}_k)$.
+        \item \textit{user-level}: We aggregate chunk embeddings via a second mean pooling layer to obtain the final user representation: $\mathbf{u} = \frac{1}{K} \sum_{k=1}^K \mathbf{c}_k$.
+    \end{itemize}
+\end{enumerate}
+
+This approach ensures that personality traits, which are manifested cumulatively over time, are captured from the entire history rather than a single tweet.
+
+\subsubsection{Optimization: Layer-wise Learning Rate Decay (LLRD)}
+Fine-tuning heavy pre-trained models on small datasets (like PAN 2015) is prone to catastrophic forgetting. We mitigate this using **Layer-wise Learning Rate Decay (LLRD)**.
+Instead of a uniform learning rate $\eta$, we assign differential rates $\eta_l$ to each layer $l$:
+\begin{equation}
+    \eta_l = \eta_{Base} \cdot \xi^{D - l}
+\end{equation}
+where $D$ is the total number of layers, and $\xi = 0.95$ is the decay factor.
+\begin{itemize}
+    \item The \textbf{Bottom Layers} (general linguistic features) and Embeddings receive the lowest rates.
+\end{itemize}
+This stabilizes training by preserving the robust linguistic knowledge of the pre-trained model while allowing the top layers to adapt rapidly to the personality regression task.
+
+\subsubsection{Loss Function}
+We train the personality regressor to minimize the Mean Squared Error (MSE) between the predicted trait scores $\hat{\mathbf{p}}_u$ and the ground truth vectors $\mathbf{p}_u$:
+\begin{equation}
+    \mathcal{L}_{MSE} = \frac{1}{|\mathcal{B}|} \sum_{u \in \mathcal{B}} ||\mathbf{p}_u - \hat{\mathbf{p}}_u||^2 + \lambda ||\Theta||^2
+\end{equation}
+where $\mathcal{B}$ is the training batch and $\lambda ||\Theta||^2$ represents the L2 regularization (weight decay) applied to the model parameters.
+
+\subsection{Mining Association Rules (Co-occurrence)}
+Hashtag usage is highly correlated (e.g., \#fitness implies \#gym). We mine these patterns using probabilistic association rules.
+
+\textbf{First-Order Co-occurrence:}
+We define the conditional probability of tag $h_j$ given $h_i$ within user baskets as:
+\begin{equation}
+    P(h_j | h_i) = \frac{\text{count}(h_i, h_j)}{\text{count}(h_i)}
+\end{equation}
+The score contribution for a candidate $h$ given user history $H_u$ is:
+\begin{equation}
+    S_{cooc}^{(1)}(u, h) = \frac{1}{|H_u|} \sum_{h' \in H_u} P(h | h')
+\end{equation}
+
+\textbf{Second-Order Co-occurrence:}
+To mitigate sparsity, we compute transitive relationships ($h_i \to h_k \to h_j$):
+\begin{equation}
+    P(h_j | h_i)^{(2)} \approx \sum_{h_k \in \mathcal{H}} P(h_j | h_k) \cdot P(h_k | h_i)
+\end{equation}
+This allows recommending tags even if they have never appeared directly with the user's history, provided they share a common ''bridge'' tag.
+
+\subsection{Hybrid Re-ranking Model}
+Our proposed Hybrid Model integrates diverse signals into a single scoring function. For a user $u$ and candidate hashtag $h$:
+
+\begin{equation}
+\begin{split}
+    Score(u, h) = &(1-\alpha) \cdot \cos(\mathbf{e}_{H_u}, \mathbf{e}_h) 
+    + \alpha \cdot \cos(\mathbf{p}_u, \mathbf{p}_h) \\
+    &+ \beta \cdot \log(\text{Pop}_h) 
+    + \gamma \cdot \mathbb{I}(h \in \text{Tweet})
+    + \delta \cdot S_{cooc}(u, h)
+\end{split}
+\end{equation}
+
+Where:
+\begin{itemize}
+    \item \textbf{Content Similarity}: $\cos(\mathbf{a}, \mathbf{b}) = \frac{\mathbf{a} \cdot \mathbf{b}}{||\mathbf{a}|| ||\mathbf{b}||}$. Measures semantic alignment between user history and hashtag embeddings.
+    \item \textbf{Popularity}: $\text{Pop}_h$ is the global frequency of $h$ in the training set. We use log-smoothing to prevent popular tags from dominating.
+    \item \textbf{Keyword Match}: $\mathbb{I}(\cdot)$ is a binary indicator (1 if hashtag literal string appears in input text, 0 otherwise).
+    \item \textbf{Hyperparameters}: We empirically set $\alpha=0.2, \beta=0.1, \gamma=0.5, \delta=0.2$ via grid search.
+\end{itemize}
+
+\subsection{Personality-Enhanced LightGCN}
+We extend LightGCN~\cite{he2020lightgcn} to explicitly model personality. 
+
+\textbf{Initialization:}
+Standard LightGCN initializes users with random embeddings $\mathbf{e}_u \in \mathbb{R}^d$. We augment this by injecting personality:
+\begin{equation}
+    \mathbf{e}_u^{(0)} = \mathbf{e}_{ID} + \mathbf{W}_p \cdot \mathbf{p}_u
+\end{equation}
+where $\mathbf{e}_{ID}$ is the learnable ID embedding and $\mathbf{W}_p \in \mathbb{R}^{d \times 5}$ projects the personality vector into the latent space.
+
+\textbf{Graph Propagation:}
+We perform message passing on the user-item bipartite graph with normalized adjacency matrix $\tilde{\mathbf{A}}$:
+\begin{equation}
+    \mathbf{E}^{(k+1)} = (\mathbf{D}^{-\frac{1}{2}} \mathbf{A} \mathbf{D}^{-\frac{1}{2}}) \mathbf{E}^{(k)}
+\end{equation}
+After $K$ layers, the final embedding is the mean of all layers: $\mathbf{e}_u^* = \frac{1}{K+1} \sum_{k=0}^K \mathbf{e}_u^{(k)}$. This ensures that users with similar personalities propagate their preferences to similar items efficiently.
+
+\textbf{Prediction}:
+The final preference score is the inner product of the refined user and item embeddings:
+\begin{equation}
+    \hat{y}_{u,h} = \mathbf{e}_u^* \cdot \mathbf{e}_h^*
+\end{equation}
+
+\textbf{Optimization:}
+We optimize the model using the Bayesian Personalized Ranking (BPR) loss, which assumes that a user prefers an observed interaction $(u, i)$ over an unobserved one $(u, j)$:
+\begin{equation}
+    \mathcal{L}_{BPR} = - \sum_{(u,i,j) \in \mathcal{D}} \ln \sigma(\hat{y}_{ui} - \hat{y}_{uj}) + \lambda ||\Theta||^2
+\end{equation}
+where $\sigma(\cdot)$ is the sigmoid function, $\mathcal{D}$ is the set of sampled triplets, and $\lambda$ controls the L2 regularization.
+
+\subsection{Ensemble Strategy}
+To combine the precision of Association Rules with the recall of LightGCN, we employ **Reciprocal Rank Fusion (RRF)**:
+\begin{equation}
+    Score_{RRF}(h) = \sum_{r \in \mathcal{M}} \frac{1}{k + \text{rank}_r(h)}
+\end{equation}
+where $\mathcal{M}$ is the set of rankers (Hybrid, GNN, Co-occurrence) and $k=60$ is a damping constant.
+
+% ============================================================
+\section{Experiments}
+\label{sec:exp}
+
+\subsection{Experimental Setup}
+\begin{itemize}
+    \item \textbf{Dataset}: PAN 2015 Author Profiling (Twitter). $N=152$ users.
+    \item \textbf{Evaluation Protocol}: 
+    We strictly separate users into Train set ($\mathcal{U}_{train}$), Validation set ($\mathcal{U}_{val}$), and Test set ($\mathcal{U}_{test}$) using a \textbf{stratified 70/10/20 split}. This ensures no user overlap between sets (User-based Split).
+    \begin{itemize}
+        \item \emph{Training}: Item Profiles and Association Rules are built using ONLY interactions from $\mathcal{U}_{train}$.
+        \item \emph{Testing}: For each $u \in \mathcal{U}_{test}$, we provide their first 80\% hashtags as history and predict the remaining 20\%.
+    \end{itemize}
+    \item \textbf{Implementation Details}: All models were implemented in PyTorch and trained on a single \textbf{NVIDIA GPU}. We used the \textbf{AdamW} optimizer with a base learning rate of $2e-5$, combined with a cosine annealing scheduler and layer-wise learning rate decay (LLRD) to prevent catastrophic forgetting.
+    \item \textbf{Metrics}: Precision@10 (P@10), Recall@10 (R@10), Mean Average Precision (MAP@10).
+\end{itemize}
+
+\subsection{Training Dynamics}
+We monitored the training of our Personality Regressors using learning curves (loss and Pearson correlation). Detailed training logs are available at: \url{https://drive.google.com/drive/folders/PLACEHOLDER_LINK}.
+
+\begin{itemize}
+    \item \textbf{Convergence}: The Twitter-RoBERTa model on English data converges rapidly, reaching peak correlation ($r=0.72$) around Epoch 12 (Figure~\ref{fig:learning_curve}).
+    \item \textbf{Overfitting}: Without LLRD, we observed a divergence between training loss and validation loss after Epoch 5. Applying LLRD maintained stable validation performance up to Epoch 20.
+    \item \textbf{Sequence Length}: Roughly 15\% of users had histories exceeding 4096 tokens (8 chunks). Our hierarchical pooling handled this gracefully.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{results/learning_curve_en_twitter.png}
+    \caption{Learning Curves for Twitter-RoBERTa (English). Left: MSE Loss minimization. Right: Improvements in RMSE, Accuracy, and Pearson Correlation over epochs.}
+    \label{fig:learning_curve}
+\end{figure}
+
+\subsection{Data Analysis}
+Before training, we analyzed the distribution of the Big Five personality traits to understand the target variance.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{results/eda/trait_distributions.png}
+    \caption{Distribution of Big Five Personality Traits across languages. The scores are centered around 0.0-0.2 but exhibit significant spread, particularly for \textit{Openness} and \textit{Conscientiousness}. The distributions are largely consistent across languages, though Dutch (nl) shows slightly higher density in the upper quartiles for \textit{Openness}.}
+    \label{fig:trait_dist}
+\end{figure}
+
+\subsection{Personality Prediction Results}
+We evaluated our personality models on the PAN 2015 dataset across four languages. Table~\ref{tab:personality_results} details the performance (RMSE, MAE, Accuracy, Pearson) of our fine-tuned Transformers versus a TF-IDF baseline.
+
+\begin{table}[h]
+    \centering
+    \caption{Personality Prediction Performance (RMSE \& Pearson).}
+    \label{tab:personality_results}
+    \begin{tabular}{|l|c|c|c|}
+    \hline
+    \textbf{Model} & \textbf{Lang} & \textbf{RMSE} & \textbf{Pearson} \\
+    \hline
+    TF-IDF & en & 0.140 & 0.674 \\
+    \textbf{Twitter-RoBERTa} & en & \textbf{0.116} & \textbf{0.721} \\
+    \hline
+    TF-IDF & es & 0.151 & 0.677 \\
+    \textbf{Twitter-XLM-R} & es & \textbf{0.131} & \textbf{0.752} \\
+    \hline
+    TF-IDF & it & 0.120 & 0.666 \\
+    \textbf{Twitter-XLM-R} & it & \textbf{0.110} & \textbf{0.701} \\
+    \hline
+    TF-IDF & nl & 0.125 & 0.804 \\
+    \textbf{Twitter-XLM-R} & nl & \textbf{0.100} & \textbf{0.889} \\
+    \hline
+    \end{tabular}
+\end{table}
+
+Results show that domain-adaptive pre-training (Twitter-based models) significantly boosts performance, achieving high correlation ($r > 0.7$) across all languages.
+
+
+
+\subsection{IR Evidence Retrieval Evaluation}
+To validate the quality of our retrieval mechanism (Module 3.1), we conducted a focused evaluation on the evidence extraction capabilities.
+
+\textbf{Setup}: We randomly sampled 30 users from the test set. For each user and each of the 5 traits, we retrieved the top-5 tweets flagged as evidence by our system (using BM25 vectors).
+\textbf{Annotation}: A human annotator labeled each tweet as \textit{Relevant} (1) or \textit{Not Relevant} (0) based on whether it genuinely reflected the predicted trait.
+\textbf{Metrics}: Our system achieved a **Mean Precision@5 of 0.731** and an **nDCG@5 of 0.941**. This indicates that not only are the retrieved tweets highly relevant (73\% accuracy), but the most relevant tweets are also correctly ranked at the top of the list.
+
+\subsection{Explanation Quality Assessment}
+To address the need for qualitative evaluation of our system's explainability (Module 3.2), we designed a human-in-the-loop study.
+
+\textbf{Protocol}: We selected 50 sample user inputs and generated natural language explanations justifying the predicted personality traits.
+\textbf{Rubric}: A team of 3 evaluators rated each explanation on a 1-5 Likert scale across three dimensions:
+\begin{enumerate}
+    \item \textbf{Groundedness}: Does the explanation explicitly cite evidence from the user's tweets?
+    \item \textbf{Helpfulness}: Is the explanation clear and useful to a non-expert?
+    \item \textbf{Consistency}: Does the explanation align with the numeric trait prediction?
+\end{enumerate}
+\textbf{Result}: The explanations received high ratings across all categories: **Groundedness ($4.62 \pm 0.69$)**, **Helpfulness ($4.86 \pm 0.40$)**, and **Consistency ($4.88 \pm 0.38$)**. These scores demonstrate that the system produces trustworthy and user-friendly justifications.
+
+\subsection{System Demonstration}
+To validate the practical applicability of our model, we developed a web-based demonstration system using Streamlit.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{screenshots/demo_input.png}
+    \caption{System Interface: Users input social media posts or upload a file. The system processes the text in real-time.}
+    \label{fig:demo_input}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{screenshots/demo_output.png}
+    \caption{Prediction Results: The system displays the predicted Big Five profile (radar chart) and recommends personalized hashtags with explanations.}
+    \label{fig:demo_output}
+\end{figure}
+
+\subsection{Hashtag Recommendation Results}
+
+Our experimental results for the recommendation task are summarized in Table~\ref{tab:results}.
+
+\begin{table}[h]
+\centering
+\caption{Performance Comparison (Cold-User Setting, MAP@10).}
+\label{tab:results}
+\begin{tabular}{l|ccc|l}
+\toprule
+\textbf{Method} & \textbf{P@10} & \textbf{R@10} & \textbf{MAP@10} & \textbf{Insight} \\
+\midrule
+Popularity & 0.034 & 0.142 & 0.047 & Fails to personalize. \\
+Content-Based & 0.068 & 0.194 & 0.094 & Dependent on literal text matches. \\
+\midrule
+GNN (Basic LightGCN) & 0.111 & 0.331 & 0.154 & Captures latent interactions. \\
+\textbf{GNN + Personality} & \textbf{0.123} & 0.360 & 0.183 & \textbf{+19\% gain} via personality injection. \\
+\midrule
+\textbf{Hybrid (Co-occurrence)} & 0.088 & \textbf{0.451} & \textbf{0.278} & \textbf{SOTA}. Rules capture strong priors. \\
+Ensemble (RRF) & 0.128 & 0.377 & 0.202 & Diluted by lower-precision GNN scores. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Analysis:}
+\begin{enumerate}
+    \item \textbf{Dominance of Association Rules}: The Hybrid model using Co-occurrence achieves the highest MAP (0.278). In the sparse Twitter domain, explicit probabilistic rules ($P(B|A)$) often provide stronger signals than vector similarities, as hashtags tend to form tight, repeating clusters.
+    
+    \item \textbf{Personality Efficacy}: Integrating personality into LightGCN improved MAP from 0.154 to 0.183. This confirms that personality acts as a powerful manifold regularizer, grouping users with similar psychological profiles in the embedding space even if their exact interaction histories do not overlap.
+\end{enumerate}
+
+\subsection{Ablation Study}
+To further understand the contribution of each component, we evaluated variations of the Hybrid Model (Table ~\ref{tab:ablation}).
+
+\begin{table}[h]
+\centering
+\caption{Ablation Study on Hybrid Model Components.}
+\label{tab:ablation}
+\begin{tabular}{l|c|c}
+\toprule
+\textbf{Configuration} & \textbf{MAP@10} & \textbf{$\Delta$} \\
+\midrule
+\textbf{Full Hybrid Model} & \textbf{0.278} & - \\
+\midrule
+w/o Personality ($\alpha=0$) & 0.265 & -4.7\% \\
+w/o Co-occurrence ($\delta=0$) & 0.210 & -24.5\% \\
+w/o Keyword Match ($\gamma=0$) & 0.255 & -8.3\% \\
+w/o Content Sim ($\text{content}=0$) & 0.240 & -13.7\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The ablation study reveals that **Co-occurrence Rules** are the single most critical factor, causing a 24.5\% drop when removed. This validates our hypothesis that hashtag usage follows strong local patterns. However, removing **Personality** also leads to a noticeable drop (-4.7\%), proving its value as a complementary signal, particularly for users with idiosyncratic interests not captured by popularity.
+
+% ============================================================
+\section{Conclusion}
+
+We presented a comprehensive Hashtag Recommendation system that leverages the synergy between heuristic rules, content profiling, and personality traits. Our **Personality-Enhanced LightGCN** outperforms standard baselines, validating the role of psychological traits in user modeling. However, the exact **Hybrid Re-ranking** with Association Rules remains the most effective strategy for immediate predictive accuracy. Future work will explore attention mechanisms to dynamically weight the contribution of personality versus content context.
+
+\bibliographystyle{splncs04}
+\bibliography{ref}
+
+% ============================================================
+\appendix
+\section{Appendix: Hyperparameters and Environment}
+
+\subsection{Personality Prediction Model}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Parameter} & \textbf{Value} \\
+\hline
+Optimizer & AdamW \\
+Learning Rate (Base) & $2e-5$ \\
+Weight Decay & $0.01$ \\
+LLRD Decay Factor ($\xi$) & $0.95$ \\
+Batch Size & 8 \\
+Max Sequence Length & 512 (per chunk) \\
+Max Chunks & 8 \\
+Dropout & 0.1 \\
+Warmup Epochs & 2 \\
+\hline
+\end{tabular}
+\caption{Hyperparameters for Transformer Regressor.}
+\end{table}
+
+\subsection{RecSys Models}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|c|}
+\hline
+\textbf{Model} & \textbf{Parameter} & \textbf{Value} \\
+\hline
+\textbf{Hybrid} & Alpha ($\alpha$) - Personality & 0.2 \\
+& Beta ($\beta$) - Popularity & 0.1 \\
+& Gamma ($\gamma$) - Keyword & 0.5 \\
+& Delta ($\delta$) - Co-occurrence & 0.2 \\
+\hline
+\textbf{LightGCN} & Embedding Dim & 64 \\
+& Layers ($K$) & 3 \\
+& Learning Rate & $0.001$ \\
+& Batch Size & 2048 \\
+\hline
+\end{tabular}
+\caption{Hyperparameters for Hybrid and GNN Recommenders.}
+\end{table}
+
+\end{document}

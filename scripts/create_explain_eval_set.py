@@ -6,6 +6,7 @@ Selects 50 samples from test set, generates predictions, evidence, and explanati
 import argparse
 import sys
 import json
+import torch
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -27,6 +28,7 @@ from src.config import (
 from src.utils.io import setup_logging, load_parquet, load_splits
 from src.utils.seed import set_seed
 from src.models.tfidf_ridge import TfidfRidgeModel
+from src.models.transformer_regressor import TransformerTrainer
 from src.ir.bm25 import BM25Index
 from src.ir.evidence import retrieve_evidence_for_user
 from src.rag.explain import PersonalityExplainer
@@ -36,7 +38,8 @@ def main():
     parser = argparse.ArgumentParser(description="Create explanation evaluation dataset")
     parser.add_argument("--n_samples", type=int, default=50, help="Number of samples to generate")
     parser.add_argument("--lang", type=str, default="en", help="Language code")
-    parser.add_argument("--model_path", type=str, default=None, help="Path to model file (default: baseline_{lang}.joblib)")
+    parser.add_argument("--model_type", type=str, default="tfidf", choices=["tfidf", "transformer"], help="Model type")
+    parser.add_argument("--model_path", type=str, default=None, help="Path to model file")
     args = parser.parse_args()
 
     logger = setup_logging("create_explain_eval")
@@ -79,17 +82,28 @@ def main():
     logger.info(f"Selected {len(sampled_user_ids)} users for evaluation")
     
     # 3. Load model
-    logger.info("Loading model...")
+    logger.info(f"Loading {args.model_type} model...")
     if args.model_path:
         model_path = Path(args.model_path)
     else:
-        model_path = MODELS_DIR / f"baseline_{args.lang}.joblib"
+        if args.model_type == "tfidf":
+            model_path = MODELS_DIR / f"baseline_{args.lang}.joblib"
+        else:
+            model_path = MODELS_DIR / f"transformer_{args.lang}.pt"
     
     if not model_path.exists():
         logger.error(f"Model not found at {model_path}. Run training script first.")
         sys.exit(1)
     
-    model = TfidfRidgeModel.load(model_path)
+    if args.model_type == "tfidf":
+        model = TfidfRidgeModel.load(model_path)
+    else:
+        # Load transformer model
+        # Force CPU to avoid CUDA OOM during inference if GPU is busy or limited
+        device = "cpu" 
+        model = TransformerTrainer.load(model_path)
+        model.device = torch.device(device)
+        model.model.to(device)
     
     # 4. Load IR index
     logger.info("Loading BM25 index...")

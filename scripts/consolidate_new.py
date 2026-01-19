@@ -3,7 +3,7 @@ import pandas as pd
 from pathlib import Path
 import sys
 
-RESULTS_DIR = Path("results_new")
+RESULTS_DIR = Path("results")
 
 def main():
     if not RESULTS_DIR.exists():

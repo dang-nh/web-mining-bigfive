@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 # Config
-RESULTS_DIR = "results_new"
+RESULTS_DIR = "results"
 LANGUAGES = ["en", "es", "it", "nl"]
 PYTHON = sys.executable
 
