@@ -47,14 +47,8 @@ ENV/
 .DS_Store
 Thumbs.db
 
-*.log
 *.tmp
 *.temp
-
-# Experiment logs
-logs_*.txt
-full_experiment.log
-rerun_*.log
 
 # Temporary scripts
 run_*.sh
