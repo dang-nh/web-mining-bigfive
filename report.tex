@@ -29,6 +29,7 @@
 Hashtag recommendation is a pivotal task in social media mining, serving as a bridge between user-generated content and information retrieval. However, traditional approaches often suffer from the ''cold-start'' problem and neglect the latent psychological drivers—specifically personality traits—that influence tagging behavior. This paper presents a comprehensive framework for Hashtag Recommendation that integrates the Big Five personality traits into both heuristic and deep learning models. We formally define the problem and propose two key contributions: (1) A **Hybrid Re-ranking Model** that fuses Content-based filtering, Popularity priors, and Multi-order Association Rules with a novel Personality Alignment score; (2) A **Personality-Enhanced LightGCN**, which modifies the graph convolution initialization to propagate psychological signals through the user-item interaction graph. Extensive experiments on the PAN 2015 Twitter dataset, using a strict leakage-free protocol, demonstrate that our hybrid strategy achieves a state-of-the-art MAP@10 of 27.8\%, while personality injection improves GNN performance by over 19\%.
 
 The source code and performance logs are available at: \url{https://github.com/Start-End/web-mining-bigfive}. The dataset used is the PAN 2015 Author Profiling corpus available at: \url{https://zenodo.org/records/3745945}.
+The processed dataset splits (Train/Dev/Test) used in this work are provided in the supplementary material: \path{reports/data/}.
 
 \keywords{Hashtag Recommendation \and Personality Computing \and Graph Neural Networks \and Association Rules \and Hybrid Recommender Systems}
 \end{abstract}
@@ -286,7 +287,7 @@ where $\mathcal{M}$ is the set of rankers (Hybrid, GNN, Co-occurrence) and $k=60
 \end{itemize}
 
 \subsection{Training Dynamics}
-We monitored the training of our Personality Regressors using learning curves (loss and Pearson correlation). Detailed training logs are available at: \url{https://drive.google.com/drive/folders/PLACEHOLDER_LINK}.
+We monitored the training of our Personality Regressors using learning curves (loss and Pearson correlation). Detailed training logs are available at: \path{reports/logs/}.
 
 \begin{itemize}
     \item \textbf{Convergence}: The Twitter-RoBERTa model on English data converges rapidly, reaching peak correlation ($r=0.72$) around Epoch 12 (Figure~\ref{fig:learning_curve}).
