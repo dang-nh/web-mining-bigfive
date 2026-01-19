@@ -1,0 +1,626 @@
+user_id,trait,rank,tweet,score,relevant
+1d86969e-85ac-475d-829c-0026ab35e301,open,1,@user @user @user maybe it *is* all a natural experiment. With deception. And no closure. And then running away from the lab.,0.0,1
+1d86969e-85ac-475d-829c-0026ab35e301,open,2,"@user ""shaming""? How so?",0.0,1
+1d86969e-85ac-475d-829c-0026ab35e301,open,3,"Oh man, idk. Buss & Schmitt (2011) ""Evolutionary Psychology and Feminism."" Sex Roles: http (full text)",0.0,0
+1d86969e-85ac-475d-829c-0026ab35e301,open,4,@user @user I think they realised the students are the product not the customer #soylentgreen,0.0,1
+1d86969e-85ac-475d-829c-0026ab35e301,open,5,"Ah, #pebble offers usecases for itself ""Maybe you're jonesing to see your compile status or recent github commits."" http",0.0,1
+1d86969e-85ac-475d-829c-0026ab35e301,conscientious,1,@user the subway is awesome - fast and reliable,10.060936560022856,1
+1d86969e-85ac-475d-829c-0026ab35e301,conscientious,2,@user @user @user maybe it *is* all a natural experiment. With deception. And no closure. And then running away from the lab.,0.0,1
+1d86969e-85ac-475d-829c-0026ab35e301,conscientious,3,"@user ""shaming""? How so?",0.0,1
+1d86969e-85ac-475d-829c-0026ab35e301,conscientious,4,"Oh man, idk. Buss & Schmitt (2011) ""Evolutionary Psychology and Feminism."" Sex Roles: http (full text)",0.0,1
+1d86969e-85ac-475d-829c-0026ab35e301,conscientious,5,@user @user I think they realised the students are the product not the customer #soylentgreen,0.0,0
+1d86969e-85ac-475d-829c-0026ab35e301,extroverted,1,"Thanks for putting on such an awesome party for my last weekend, Boston! #bostonpride @user One Beacon Street http",4.895715061128687,1
+1d86969e-85ac-475d-829c-0026ab35e301,extroverted,2,So as I understand it basically the situation in Queensland is that the Tea Party is running the place. #catchingup,4.753892176871664,1
+1d86969e-85ac-475d-829c-0026ab35e301,extroverted,3,Also a goldmine of social shaping examples: the extensive Welcome to Twitter help pages: http #platformpedagogy @user,4.247522578975209,1
+1d86969e-85ac-475d-829c-0026ab35e301,extroverted,4,@user @user @user maybe it *is* all a natural experiment. With deception. And no closure. And then running away from the lab.,0.0,1
+1d86969e-85ac-475d-829c-0026ab35e301,extroverted,5,"@user ""shaming""? How so?",0.0,0
+1d86969e-85ac-475d-829c-0026ab35e301,agreeable,1,@user @user @user maybe it *is* all a natural experiment. With deception. And no closure. And then running away from the lab.,0.0,0
+1d86969e-85ac-475d-829c-0026ab35e301,agreeable,2,"@user ""shaming""? How so?",0.0,1
+1d86969e-85ac-475d-829c-0026ab35e301,agreeable,3,"Oh man, idk. Buss & Schmitt (2011) ""Evolutionary Psychology and Feminism."" Sex Roles: http (full text)",0.0,1
+1d86969e-85ac-475d-829c-0026ab35e301,agreeable,4,@user @user I think they realised the students are the product not the customer #soylentgreen,0.0,1
+1d86969e-85ac-475d-829c-0026ab35e301,agreeable,5,"Ah, #pebble offers usecases for itself ""Maybe you're jonesing to see your compile status or recent github commits."" http",0.0,0
+1d86969e-85ac-475d-829c-0026ab35e301,stable,1,@user @user @user maybe it *is* all a natural experiment. With deception. And no closure. And then running away from the lab.,0.0,1
+1d86969e-85ac-475d-829c-0026ab35e301,stable,2,"@user ""shaming""? How so?",0.0,0
+1d86969e-85ac-475d-829c-0026ab35e301,stable,3,"Oh man, idk. Buss & Schmitt (2011) ""Evolutionary Psychology and Feminism."" Sex Roles: http (full text)",0.0,0
+1d86969e-85ac-475d-829c-0026ab35e301,stable,4,@user @user I think they realised the students are the product not the customer #soylentgreen,0.0,0
+1d86969e-85ac-475d-829c-0026ab35e301,stable,5,"Ah, #pebble offers usecases for itself ""Maybe you're jonesing to see your compile status or recent github commits."" http",0.0,0
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,open,1,#67 - Fishes in face. (Courtesy of B. Del Nero) - Pesci in faccia http,0.0,1
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,open,2,#68 - Do I have written giocondo on the forehead? (Courtesy of M. Zampollo) - Ho scritto giocondo in fronte? http,0.0,0
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,open,3,"#69 - Who borns rounded, does not die squared. (Courtesy of P. Bilotti Feat. R. Rotti) - Chi nasce tondo, non… http",0.0,1
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,open,4,#70 - You have served that to me on a silver tea tray. - Me l'hai servita su un piatto d'argento http,0.0,1
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,open,5,#71 - On time like taxes. (Courtesy of P. Bilotti) - Puntuale come le tasse http,0.0,0
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,conscientious,1,#67 - Fishes in face. (Courtesy of B. Del Nero) - Pesci in faccia http,0.0,1
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,conscientious,2,#68 - Do I have written giocondo on the forehead? (Courtesy of M. Zampollo) - Ho scritto giocondo in fronte? http,0.0,1
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,conscientious,3,"#69 - Who borns rounded, does not die squared. (Courtesy of P. Bilotti Feat. R. Rotti) - Chi nasce tondo, non… http",0.0,1
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,conscientious,4,#70 - You have served that to me on a silver tea tray. - Me l'hai servita su un piatto d'argento http,0.0,1
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,conscientious,5,#71 - On time like taxes. (Courtesy of P. Bilotti) - Puntuale come le tasse http,0.0,1
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,extroverted,1,#67 - Fishes in face. (Courtesy of B. Del Nero) - Pesci in faccia http,0.0,1
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,extroverted,2,#68 - Do I have written giocondo on the forehead? (Courtesy of M. Zampollo) - Ho scritto giocondo in fronte? http,0.0,1
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,extroverted,3,"#69 - Who borns rounded, does not die squared. (Courtesy of P. Bilotti Feat. R. Rotti) - Chi nasce tondo, non… http",0.0,1
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,extroverted,4,#70 - You have served that to me on a silver tea tray. - Me l'hai servita su un piatto d'argento http,0.0,1
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,extroverted,5,#71 - On time like taxes. (Courtesy of P. Bilotti) - Puntuale come le tasse http,0.0,1
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,agreeable,1,#67 - Fishes in face. (Courtesy of B. Del Nero) - Pesci in faccia http,0.0,1
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,agreeable,2,#68 - Do I have written giocondo on the forehead? (Courtesy of M. Zampollo) - Ho scritto giocondo in fronte? http,0.0,1
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,agreeable,3,"#69 - Who borns rounded, does not die squared. (Courtesy of P. Bilotti Feat. R. Rotti) - Chi nasce tondo, non… http",0.0,1
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,agreeable,4,#70 - You have served that to me on a silver tea tray. - Me l'hai servita su un piatto d'argento http,0.0,1
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,agreeable,5,#71 - On time like taxes. (Courtesy of P. Bilotti) - Puntuale come le tasse http,0.0,1
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,stable,1,#67 - Fishes in face. (Courtesy of B. Del Nero) - Pesci in faccia http,0.0,1
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,stable,2,#68 - Do I have written giocondo on the forehead? (Courtesy of M. Zampollo) - Ho scritto giocondo in fronte? http,0.0,1
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,stable,3,"#69 - Who borns rounded, does not die squared. (Courtesy of P. Bilotti Feat. R. Rotti) - Chi nasce tondo, non… http",0.0,1
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,stable,4,#70 - You have served that to me on a silver tea tray. - Me l'hai servita su un piatto d'argento http,0.0,1
+dc9c0dae-579a-4cb2-a52f-dc5bd3514831,stable,5,#71 - On time like taxes. (Courtesy of P. Bilotti) - Puntuale come le tasse http,0.0,1
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,open,1,Everyone's still in school AND IM BORED,0.0,1
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,open,2,Shouldn't you be learning @user,0.0,1
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,open,3,@user is lunch fun :),0.0,0
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,open,4,All Josie does is send me videos of her on vacation while I'm sitting here doing homework :))))),0.0,0
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,open,5,"Zoe said ""laughing my oss aff"" ????",0.0,0
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,conscientious,1,You can't be too careful anymore,10.735274577255172,1
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,conscientious,2,Everyone's still in school AND IM BORED,0.0,1
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,conscientious,3,Shouldn't you be learning @user,0.0,1
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,conscientious,4,@user is lunch fun :),0.0,1
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,conscientious,5,All Josie does is send me videos of her on vacation while I'm sitting here doing homework :))))),0.0,1
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,extroverted,1,@user is lunch fun :),8.020135447425814,1
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,extroverted,2,I have more fun when I'm really tired than I do when I'm high,5.489230342087396,1
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,extroverted,3,I really want to have fun at school events cause it's my last year but I'm really just so tired of perry hall I can't find the motivation,3.681860545736546,0
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,extroverted,4,Everyone's still in school AND IM BORED,0.0,1
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,extroverted,5,Shouldn't you be learning @user,0.0,0
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,agreeable,1,Everyone's still in school AND IM BORED,0.0,1
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,agreeable,2,Shouldn't you be learning @user,0.0,1
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,agreeable,3,@user is lunch fun :),0.0,0
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,agreeable,4,All Josie does is send me videos of her on vacation while I'm sitting here doing homework :))))),0.0,0
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,agreeable,5,"Zoe said ""laughing my oss aff"" ????",0.0,0
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,stable,1,Everyone's still in school AND IM BORED,0.0,1
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,stable,2,Shouldn't you be learning @user,0.0,1
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,stable,3,@user is lunch fun :),0.0,0
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,stable,4,All Josie does is send me videos of her on vacation while I'm sitting here doing homework :))))),0.0,1
+eccde39e-dbb6-462c-a1a9-cdd354ef24fc,stable,5,"Zoe said ""laughing my oss aff"" ????",0.0,0
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,open,1,Besalu: snow free since 2007,0.0,1
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,open,2,"A cremar tot lo d Munich - Frankfurt, que no wals poc...",0.0,1
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,open,3,Double rainbow a montagut!,0.0,1
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,open,4,Superconnected! http,0.0,1
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,open,5,@user no tens tallats a l'armari. Ja ho he mirat.,0.0,0
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,conscientious,1,Besalu: snow free since 2007,0.0,1
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,conscientious,2,"A cremar tot lo d Munich - Frankfurt, que no wals poc...",0.0,0
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,conscientious,3,Double rainbow a montagut!,0.0,1
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,conscientious,4,Superconnected! http,0.0,1
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,conscientious,5,@user no tens tallats a l'armari. Ja ho he mirat.,0.0,0
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,extroverted,1,Welcom to the fun of fun! now 'ive come of age... Welcom to the house of fun! Welcom to the lion's den!,4.286767713864292,1
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,extroverted,2,Besalu: snow free since 2007,0.0,1
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,extroverted,3,"A cremar tot lo d Munich - Frankfurt, que no wals poc...",0.0,1
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,extroverted,4,Double rainbow a montagut!,0.0,1
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,extroverted,5,Superconnected! http,0.0,0
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,agreeable,1,Besalu: snow free since 2007,0.0,1
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,agreeable,2,"A cremar tot lo d Munich - Frankfurt, que no wals poc...",0.0,1
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,agreeable,3,Double rainbow a montagut!,0.0,1
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,agreeable,4,Superconnected! http,0.0,1
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,agreeable,5,@user no tens tallats a l'armari. Ja ho he mirat.,0.0,1
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,stable,1,Keep calm and burn a bank,9.536309812458788,1
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,stable,2,Besalu: snow free since 2007,0.0,1
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,stable,3,"A cremar tot lo d Munich - Frankfurt, que no wals poc...",0.0,1
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,stable,4,Double rainbow a montagut!,0.0,1
+b5cabb17-22cb-4e38-9047-ed4fb6fc18ad,stable,5,Superconnected! http,0.0,1
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,open,1,You know how sometimes you start something new and you can literally feel your body buzzing with creative energy... http,5.082257593768349,1
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,open,2,"Doing a little research for a book. Tell me something, please. What, in your opinion, makes a woman ""hot?"" (P.S.... http",0.0,1
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,open,3,Another book research question: what makes your spouse or significant other attractive to you? What do you wish you could change?,0.0,1
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,open,4,"One more book research question: Why and how did your last relationship end? (Or, tell me about your most... http",0.0,0
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,open,5,This one's for married people and those in long-term relationships: how did you KNOW you wanted to marry your wife/husband?,0.0,0
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,conscientious,1,"Doing a little research for a book. Tell me something, please. What, in your opinion, makes a woman ""hot?"" (P.S.... http",0.0,0
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,conscientious,2,Another book research question: what makes your spouse or significant other attractive to you? What do you wish you could change?,0.0,1
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,conscientious,3,"One more book research question: Why and how did your last relationship end? (Or, tell me about your most... http",0.0,1
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,conscientious,4,This one's for married people and those in long-term relationships: how did you KNOW you wanted to marry your wife/husband?,0.0,0
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,conscientious,5,Change Your Life: ItWorks! CEO Mark Pentecost on ‘Re-Dreaming’ http,0.0,1
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,extroverted,1,Do I have any fashion-loving friends who'd be into a blogging gig?,5.75029098684006,1
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,extroverted,2,My sons and husband both love to read it! I find that it's full of fun and healthy ideas . #RedBulletin http,4.286767713864292,1
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,extroverted,3,"Doing a little research for a book. Tell me something, please. What, in your opinion, makes a woman ""hot?"" (P.S.... http",0.0,0
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,extroverted,4,Another book research question: what makes your spouse or significant other attractive to you? What do you wish you could change?,0.0,1
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,extroverted,5,"One more book research question: Why and how did your last relationship end? (Or, tell me about your most... http",0.0,1
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,agreeable,1,"Doing a little research for a book. Tell me something, please. What, in your opinion, makes a woman ""hot?"" (P.S.... http",0.0,1
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,agreeable,2,Another book research question: what makes your spouse or significant other attractive to you? What do you wish you could change?,0.0,1
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,agreeable,3,"One more book research question: Why and how did your last relationship end? (Or, tell me about your most... http",0.0,0
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,agreeable,4,This one's for married people and those in long-term relationships: how did you KNOW you wanted to marry your wife/husband?,0.0,0
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,agreeable,5,Change Your Life: ItWorks! CEO Mark Pentecost on ‘Re-Dreaming’ http,0.0,1
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,stable,1,A Hot Wife is a Confident Wife: 30 Days to Feeling Amazing - http via @user,7.535956828800239,1
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,stable,2,"Doing a little research for a book. Tell me something, please. What, in your opinion, makes a woman ""hot?"" (P.S.... http",0.0,1
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,stable,3,Another book research question: what makes your spouse or significant other attractive to you? What do you wish you could change?,0.0,1
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,stable,4,"One more book research question: Why and how did your last relationship end? (Or, tell me about your most... http",0.0,1
+e27e308c-e187-4f8d-b4cb-d845f6c9203f,stable,5,This one's for married people and those in long-term relationships: how did you KNOW you wanted to marry your wife/husband?,0.0,1
+8db4254a-8c1b-4e7d-93ec-96907253362d,open,1,"“To have a great idea, have a lot of them.” — Thomas Edison",0.0,1
+8db4254a-8c1b-4e7d-93ec-96907253362d,open,2,Jack frost (@user IDEAL Cityplex w/ 2 others) [pic]: http,0.0,1
+8db4254a-8c1b-4e7d-93ec-96907253362d,open,3,@user thanks :D,0.0,0
+8db4254a-8c1b-4e7d-93ec-96907253362d,open,4,Zero voglia di lavorare... (@user New York Company) http,0.0,1
+8db4254a-8c1b-4e7d-93ec-96907253362d,open,5,“Everything comes to him who hustles while he waits.” — Thomas Edison http,0.0,0
+8db4254a-8c1b-4e7d-93ec-96907253362d,conscientious,1,"“To have a great idea, have a lot of them.” — Thomas Edison",0.0,1
+8db4254a-8c1b-4e7d-93ec-96907253362d,conscientious,2,Jack frost (@user IDEAL Cityplex w/ 2 others) [pic]: http,0.0,1
+8db4254a-8c1b-4e7d-93ec-96907253362d,conscientious,3,@user thanks :D,0.0,1
+8db4254a-8c1b-4e7d-93ec-96907253362d,conscientious,4,Zero voglia di lavorare... (@user New York Company) http,0.0,1
+8db4254a-8c1b-4e7d-93ec-96907253362d,conscientious,5,“Everything comes to him who hustles while he waits.” — Thomas Edison http,0.0,0
+8db4254a-8c1b-4e7d-93ec-96907253362d,extroverted,1,Friends with MacBook #fail http,7.812391163239192,1
+8db4254a-8c1b-4e7d-93ec-96907253362d,extroverted,2,"“To have a great idea, have a lot of them.” — Thomas Edison",0.0,1
+8db4254a-8c1b-4e7d-93ec-96907253362d,extroverted,3,Jack frost (@user IDEAL Cityplex w/ 2 others) [pic]: http,0.0,1
+8db4254a-8c1b-4e7d-93ec-96907253362d,extroverted,4,@user thanks :D,0.0,0
+8db4254a-8c1b-4e7d-93ec-96907253362d,extroverted,5,Zero voglia di lavorare... (@user New York Company) http,0.0,1
+8db4254a-8c1b-4e7d-93ec-96907253362d,agreeable,1,"“To have a great idea, have a lot of them.” — Thomas Edison",0.0,1
+8db4254a-8c1b-4e7d-93ec-96907253362d,agreeable,2,Jack frost (@user IDEAL Cityplex w/ 2 others) [pic]: http,0.0,1
+8db4254a-8c1b-4e7d-93ec-96907253362d,agreeable,3,@user thanks :D,0.0,1
+8db4254a-8c1b-4e7d-93ec-96907253362d,agreeable,4,Zero voglia di lavorare... (@user New York Company) http,0.0,1
+8db4254a-8c1b-4e7d-93ec-96907253362d,agreeable,5,“Everything comes to him who hustles while he waits.” — Thomas Edison http,0.0,1
+8db4254a-8c1b-4e7d-93ec-96907253362d,stable,1,"“To have a great idea, have a lot of them.” — Thomas Edison",0.0,1
+8db4254a-8c1b-4e7d-93ec-96907253362d,stable,2,Jack frost (@user IDEAL Cityplex w/ 2 others) [pic]: http,0.0,1
+8db4254a-8c1b-4e7d-93ec-96907253362d,stable,3,@user thanks :D,0.0,1
+8db4254a-8c1b-4e7d-93ec-96907253362d,stable,4,Zero voglia di lavorare... (@user New York Company) http,0.0,1
+8db4254a-8c1b-4e7d-93ec-96907253362d,stable,5,“Everything comes to him who hustles while he waits.” — Thomas Edison http,0.0,1
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,open,1,Check out my new #CV #CurriculumVitae (a creative one) on @user! http,6.615371417931499,0
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,open,2,"Zoom H1, firmware 2.0 enables it to be used as USB audio interface http",0.0,1
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,open,3,"I just unlocked the ""Shutterbug"" badge on @user for adding photos to my check-ins. Say cheese! http",0.0,0
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,open,4,@user you're welcome,0.0,1
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,open,5,"Un capolavoro: ""How To Kill a Mustache"" http",0.0,0
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,conscientious,1,"Zoom H1, firmware 2.0 enables it to be used as USB audio interface http",0.0,1
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,conscientious,2,"I just unlocked the ""Shutterbug"" badge on @user for adding photos to my check-ins. Say cheese! http",0.0,1
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,conscientious,3,@user you're welcome,0.0,0
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,conscientious,4,"Un capolavoro: ""How To Kill a Mustache"" http",0.0,1
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,conscientious,5,A free and open world depends on a free and open web. And a free and open web depends on me. http #freeandopen,0.0,0
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,extroverted,1,Social media explained | via Ninja Marketing http,5.945028516630439,1
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,extroverted,2,"Zoom H1, firmware 2.0 enables it to be used as USB audio interface http",0.0,1
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,extroverted,3,"I just unlocked the ""Shutterbug"" badge on @user for adding photos to my check-ins. Say cheese! http",0.0,1
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,extroverted,4,@user you're welcome,0.0,1
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,extroverted,5,"Un capolavoro: ""How To Kill a Mustache"" http",0.0,1
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,agreeable,1,"Zoom H1, firmware 2.0 enables it to be used as USB audio interface http",0.0,1
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,agreeable,2,"I just unlocked the ""Shutterbug"" badge on @user for adding photos to my check-ins. Say cheese! http",0.0,1
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,agreeable,3,@user you're welcome,0.0,1
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,agreeable,4,"Un capolavoro: ""How To Kill a Mustache"" http",0.0,1
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,agreeable,5,A free and open world depends on a free and open web. And a free and open web depends on me. http #freeandopen,0.0,0
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,stable,1,"Zoom H1, firmware 2.0 enables it to be used as USB audio interface http",0.0,1
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,stable,2,"I just unlocked the ""Shutterbug"" badge on @user for adding photos to my check-ins. Say cheese! http",0.0,0
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,stable,3,@user you're welcome,0.0,1
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,stable,4,"Un capolavoro: ""How To Kill a Mustache"" http",0.0,0
+6f5f5740-6cfc-4c95-bbfd-c50074513a06,stable,5,A free and open world depends on a free and open web. And a free and open web depends on me. http #freeandopen,0.0,1
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,open,1,Has 2014 been the best year for dance albums in recent memory? [via @user] - http,0.0,1
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,open,2,"CAN'T WAIT! RT @user: for those, who are curious, I`m practicing for Boiler Room Moscow, doing loops on vinyl... http",0.0,1
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,open,3,Thanks @user! Wanna listen to said awesome podcast? It's here: http http,0.0,0
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,open,4,"Vapor City, being your loyal citizens has been an amazing experience! @user - http http",0.0,1
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,open,5,Tune in the @user Lab at 4.30pm GMT this afternoon for the one and only @user - http,0.0,1
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,conscientious,1,Has 2014 been the best year for dance albums in recent memory? [via @user] - http,0.0,1
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,conscientious,2,"CAN'T WAIT! RT @user: for those, who are curious, I`m practicing for Boiler Room Moscow, doing loops on vinyl... http",0.0,1
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,conscientious,3,Thanks @user! Wanna listen to said awesome podcast? It's here: http http,0.0,1
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,conscientious,4,"Vapor City, being your loyal citizens has been an amazing experience! @user - http http",0.0,1
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,conscientious,5,Tune in the @user Lab at 4.30pm GMT this afternoon for the one and only @user - http,0.0,1
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,extroverted,1,And out favourite party in 2014 was @user: @user x @user at @user #LDN #Bestof2014 #TEKLIFE : http,5.046260160609661,1
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,extroverted,2,Has 2014 been the best year for dance albums in recent memory? [via @user] - http,0.0,1
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,extroverted,3,"CAN'T WAIT! RT @user: for those, who are curious, I`m practicing for Boiler Room Moscow, doing loops on vinyl... http",0.0,1
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,extroverted,4,Thanks @user! Wanna listen to said awesome podcast? It's here: http http,0.0,1
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,extroverted,5,"Vapor City, being your loyal citizens has been an amazing experience! @user - http http",0.0,1
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,agreeable,1,Has 2014 been the best year for dance albums in recent memory? [via @user] - http,0.0,1
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,agreeable,2,"CAN'T WAIT! RT @user: for those, who are curious, I`m practicing for Boiler Room Moscow, doing loops on vinyl... http",0.0,1
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,agreeable,3,Thanks @user! Wanna listen to said awesome podcast? It's here: http http,0.0,1
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,agreeable,4,"Vapor City, being your loyal citizens has been an amazing experience! @user - http http",0.0,1
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,agreeable,5,Tune in the @user Lab at 4.30pm GMT this afternoon for the one and only @user - http,0.0,0
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,stable,1,Has 2014 been the best year for dance albums in recent memory? [via @user] - http,0.0,1
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,stable,2,"CAN'T WAIT! RT @user: for those, who are curious, I`m practicing for Boiler Room Moscow, doing loops on vinyl... http",0.0,1
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,stable,3,Thanks @user! Wanna listen to said awesome podcast? It's here: http http,0.0,1
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,stable,4,"Vapor City, being your loyal citizens has been an amazing experience! @user - http http",0.0,0
+4374e7f8-f0e3-48b7-8b24-4644ef32b850,stable,5,Tune in the @user Lab at 4.30pm GMT this afternoon for the one and only @user - http,0.0,1
+aabae9fc-b393-4124-9a1c-32370eb1adfc,open,1,"""@user: Putin, Assad, and Obama are playing a high-stakes poker game, and @user explains the rules http",0.0,1
+aabae9fc-b393-4124-9a1c-32370eb1adfc,open,2,@user wild card !,0.0,1
+aabae9fc-b393-4124-9a1c-32370eb1adfc,open,3,"""@user: ""religion wants us to believe without a deep understanding of things"" @user #CDIdeas #ideaspeligrosas""// #fail",0.0,0
+aabae9fc-b393-4124-9a1c-32370eb1adfc,open,4,Realistic looking pencil drawing~ http lo tuyo máster @user,0.0,0
+aabae9fc-b393-4124-9a1c-32370eb1adfc,open,5,"""@user Jack Ruby shot L. Harvey Oswald 63, a photographer almost took the shot of a lifetime http gran dcto.!",0.0,0
+aabae9fc-b393-4124-9a1c-32370eb1adfc,conscientious,1,"""@user: Putin, Assad, and Obama are playing a high-stakes poker game, and @user explains the rules http",0.0,1
+aabae9fc-b393-4124-9a1c-32370eb1adfc,conscientious,2,@user wild card !,0.0,1
+aabae9fc-b393-4124-9a1c-32370eb1adfc,conscientious,3,"""@user: ""religion wants us to believe without a deep understanding of things"" @user #CDIdeas #ideaspeligrosas""// #fail",0.0,1
+aabae9fc-b393-4124-9a1c-32370eb1adfc,conscientious,4,Realistic looking pencil drawing~ http lo tuyo máster @user,0.0,0
+aabae9fc-b393-4124-9a1c-32370eb1adfc,conscientious,5,"""@user Jack Ruby shot L. Harvey Oswald 63, a photographer almost took the shot of a lifetime http gran dcto.!",0.0,1
+aabae9fc-b393-4124-9a1c-32370eb1adfc,extroverted,1,"""@user: Putin, Assad, and Obama are playing a high-stakes poker game, and @user explains the rules http",0.0,1
+aabae9fc-b393-4124-9a1c-32370eb1adfc,extroverted,2,@user wild card !,0.0,1
+aabae9fc-b393-4124-9a1c-32370eb1adfc,extroverted,3,"""@user: ""religion wants us to believe without a deep understanding of things"" @user #CDIdeas #ideaspeligrosas""// #fail",0.0,1
+aabae9fc-b393-4124-9a1c-32370eb1adfc,extroverted,4,Realistic looking pencil drawing~ http lo tuyo máster @user,0.0,1
+aabae9fc-b393-4124-9a1c-32370eb1adfc,extroverted,5,"""@user Jack Ruby shot L. Harvey Oswald 63, a photographer almost took the shot of a lifetime http gran dcto.!",0.0,1
+aabae9fc-b393-4124-9a1c-32370eb1adfc,agreeable,1,"""@user: ""religion wants us to believe without a deep understanding of things"" @user #CDIdeas #ideaspeligrosas""// #fail",6.4658039310663895,1
+aabae9fc-b393-4124-9a1c-32370eb1adfc,agreeable,2,"""@user: Putin, Assad, and Obama are playing a high-stakes poker game, and @user explains the rules http",0.0,1
+aabae9fc-b393-4124-9a1c-32370eb1adfc,agreeable,3,@user wild card !,0.0,1
+aabae9fc-b393-4124-9a1c-32370eb1adfc,agreeable,4,Realistic looking pencil drawing~ http lo tuyo máster @user,0.0,0
+aabae9fc-b393-4124-9a1c-32370eb1adfc,agreeable,5,"""@user Jack Ruby shot L. Harvey Oswald 63, a photographer almost took the shot of a lifetime http gran dcto.!",0.0,1
+aabae9fc-b393-4124-9a1c-32370eb1adfc,stable,1,"""@user: Putin, Assad, and Obama are playing a high-stakes poker game, and @user explains the rules http",0.0,1
+aabae9fc-b393-4124-9a1c-32370eb1adfc,stable,2,@user wild card !,0.0,1
+aabae9fc-b393-4124-9a1c-32370eb1adfc,stable,3,"""@user: ""religion wants us to believe without a deep understanding of things"" @user #CDIdeas #ideaspeligrosas""// #fail",0.0,0
+aabae9fc-b393-4124-9a1c-32370eb1adfc,stable,4,Realistic looking pencil drawing~ http lo tuyo máster @user,0.0,0
+aabae9fc-b393-4124-9a1c-32370eb1adfc,stable,5,"""@user Jack Ruby shot L. Harvey Oswald 63, a photographer almost took the shot of a lifetime http gran dcto.!",0.0,1
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,open,1,white people love flexing their mediocre musicial skillz,0.0,1
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,open,2,hello i am chloe jk shalissa,0.0,0
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,open,3,thats shalissa http,0.0,1
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,open,4,@user youre rivht brb,0.0,1
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,open,5,“@user: @user 8 more shalissas” 7*,0.0,0
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,conscientious,1,white people love flexing their mediocre musicial skillz,0.0,1
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,conscientious,2,hello i am chloe jk shalissa,0.0,1
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,conscientious,3,thats shalissa http,0.0,0
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,conscientious,4,@user youre rivht brb,0.0,1
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,conscientious,5,“@user: @user 8 more shalissas” 7*,0.0,0
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,extroverted,1,@user @user I WATCHED THAT IN RHE THEATRES BUT I LEFT EARLY SO I COULD PREGAME FOR THIS HALLOWEEN PARTY IT WAS A HORRIBLE DECISION,4.152437037079901,1
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,extroverted,2,white people love flexing their mediocre musicial skillz,0.0,1
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,extroverted,3,hello i am chloe jk shalissa,0.0,0
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,extroverted,4,thats shalissa http,0.0,1
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,extroverted,5,@user youre rivht brb,0.0,0
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,agreeable,1,white people love flexing their mediocre musicial skillz,0.0,0
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,agreeable,2,hello i am chloe jk shalissa,0.0,1
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,agreeable,3,thats shalissa http,0.0,1
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,agreeable,4,@user youre rivht brb,0.0,1
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,agreeable,5,“@user: @user 8 more shalissas” 7*,0.0,1
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,stable,1,white people love flexing their mediocre musicial skillz,0.0,1
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,stable,2,hello i am chloe jk shalissa,0.0,1
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,stable,3,thats shalissa http,0.0,1
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,stable,4,@user youre rivht brb,0.0,0
+5097f2bf-bb7a-48f3-8c40-278ed7ff655c,stable,5,“@user: @user 8 more shalissas” 7*,0.0,1
+d349ae7a-c5e4-4a92-8536-84009e03319f,open,1,Episodic memory involves a mental time travel to the past & to the future w/ the feeling that the experience has happened/will happen to me,0.0,1
+d349ae7a-c5e4-4a92-8536-84009e03319f,open,2,3-year-olds exhibited evidence of both episodic memory and episodic foresight http,0.0,1
+d349ae7a-c5e4-4a92-8536-84009e03319f,open,3,Scientology Tropes Enter Mainstream Neuroscience? > w/ Lumosity paraphernalia http via @user,0.0,1
+d349ae7a-c5e4-4a92-8536-84009e03319f,open,4,661 firme! Open message to the European Commission concerning the Human Brain Project http,0.0,0
+d349ae7a-c5e4-4a92-8536-84009e03319f,open,5,Finally! Hard Evidence We Can Slow Alzheimer's By Exercising The Body And The Mind http Finnish Study on 1260 subjects,0.0,1
+d349ae7a-c5e4-4a92-8536-84009e03319f,conscientious,1,Episodic memory involves a mental time travel to the past & to the future w/ the feeling that the experience has happened/will happen to me,0.0,1
+d349ae7a-c5e4-4a92-8536-84009e03319f,conscientious,2,3-year-olds exhibited evidence of both episodic memory and episodic foresight http,0.0,1
+d349ae7a-c5e4-4a92-8536-84009e03319f,conscientious,3,Scientology Tropes Enter Mainstream Neuroscience? > w/ Lumosity paraphernalia http via @user,0.0,1
+d349ae7a-c5e4-4a92-8536-84009e03319f,conscientious,4,661 firme! Open message to the European Commission concerning the Human Brain Project http,0.0,0
+d349ae7a-c5e4-4a92-8536-84009e03319f,conscientious,5,Finally! Hard Evidence We Can Slow Alzheimer's By Exercising The Body And The Mind http Finnish Study on 1260 subjects,0.0,1
+d349ae7a-c5e4-4a92-8536-84009e03319f,extroverted,1,The Kardashian index: a measure of discrepant social media profile for scientists http via @user followers/citations,4.386694704748707,0
+d349ae7a-c5e4-4a92-8536-84009e03319f,extroverted,2,Episodic memory involves a mental time travel to the past & to the future w/ the feeling that the experience has happened/will happen to me,0.0,1
+d349ae7a-c5e4-4a92-8536-84009e03319f,extroverted,3,3-year-olds exhibited evidence of both episodic memory and episodic foresight http,0.0,1
+d349ae7a-c5e4-4a92-8536-84009e03319f,extroverted,4,Scientology Tropes Enter Mainstream Neuroscience? > w/ Lumosity paraphernalia http via @user,0.0,1
+d349ae7a-c5e4-4a92-8536-84009e03319f,extroverted,5,661 firme! Open message to the European Commission concerning the Human Brain Project http,0.0,0
+d349ae7a-c5e4-4a92-8536-84009e03319f,agreeable,1,Episodic memory involves a mental time travel to the past & to the future w/ the feeling that the experience has happened/will happen to me,0.0,1
+d349ae7a-c5e4-4a92-8536-84009e03319f,agreeable,2,3-year-olds exhibited evidence of both episodic memory and episodic foresight http,0.0,1
+d349ae7a-c5e4-4a92-8536-84009e03319f,agreeable,3,Scientology Tropes Enter Mainstream Neuroscience? > w/ Lumosity paraphernalia http via @user,0.0,0
+d349ae7a-c5e4-4a92-8536-84009e03319f,agreeable,4,661 firme! Open message to the European Commission concerning the Human Brain Project http,0.0,1
+d349ae7a-c5e4-4a92-8536-84009e03319f,agreeable,5,Finally! Hard Evidence We Can Slow Alzheimer's By Exercising The Body And The Mind http Finnish Study on 1260 subjects,0.0,1
+d349ae7a-c5e4-4a92-8536-84009e03319f,stable,1,Episodic memory involves a mental time travel to the past & to the future w/ the feeling that the experience has happened/will happen to me,0.0,0
+d349ae7a-c5e4-4a92-8536-84009e03319f,stable,2,3-year-olds exhibited evidence of both episodic memory and episodic foresight http,0.0,1
+d349ae7a-c5e4-4a92-8536-84009e03319f,stable,3,Scientology Tropes Enter Mainstream Neuroscience? > w/ Lumosity paraphernalia http via @user,0.0,0
+d349ae7a-c5e4-4a92-8536-84009e03319f,stable,4,661 firme! Open message to the European Commission concerning the Human Brain Project http,0.0,1
+d349ae7a-c5e4-4a92-8536-84009e03319f,stable,5,Finally! Hard Evidence We Can Slow Alzheimer's By Exercising The Body And The Mind http Finnish Study on 1260 subjects,0.0,1
+98ae4949-8a9c-481c-911c-a3fa49eea244,open,1,Google Creative Lab Launches Coder To Turn Raspberry Pi Into A Basic Web Development Platform http via @user,5.394820300334608,1
+98ae4949-8a9c-481c-911c-a3fa49eea244,open,2,Educational apps are the second-most downloaded in #iTunes of all categories. #mobilelearning #edtech,0.0,1
+98ae4949-8a9c-481c-911c-a3fa49eea244,open,3,#3D printing practical application in schools: #archeology @user and #astronomy #business #computerscience.,0.0,1
+98ae4949-8a9c-481c-911c-a3fa49eea244,open,4,@user is the most promising potential #wereabletechnology in #highereducation. #k12 #edtech #edchat #education #googleglass #glass,0.0,1
+98ae4949-8a9c-481c-911c-a3fa49eea244,open,5,@user I look forward to starting a Code Club in Italy in September! #code,0.0,0
+98ae4949-8a9c-481c-911c-a3fa49eea244,conscientious,1,Educational apps are the second-most downloaded in #iTunes of all categories. #mobilelearning #edtech,0.0,1
+98ae4949-8a9c-481c-911c-a3fa49eea244,conscientious,2,#3D printing practical application in schools: #archeology @user and #astronomy #business #computerscience.,0.0,1
+98ae4949-8a9c-481c-911c-a3fa49eea244,conscientious,3,@user is the most promising potential #wereabletechnology in #highereducation. #k12 #edtech #edchat #education #googleglass #glass,0.0,1
+98ae4949-8a9c-481c-911c-a3fa49eea244,conscientious,4,@user I look forward to starting a Code Club in Italy in September! #code,0.0,0
+98ae4949-8a9c-481c-911c-a3fa49eea244,conscientious,5,10 places where anyone can #learntocode http #code #STEM #education #youth #skills #K12 #edtech,0.0,1
+98ae4949-8a9c-481c-911c-a3fa49eea244,extroverted,1,"Recruiting games, when the employers play the fun card: http @user #TRUSTbyDanone #SocialGame",5.688694211163804,1
+98ae4949-8a9c-481c-911c-a3fa49eea244,extroverted,2,What Social Media Can (Really) Tell You About Job Applicants http via @user,4.864896771561648,1
+98ae4949-8a9c-481c-911c-a3fa49eea244,extroverted,3,Educational apps are the second-most downloaded in #iTunes of all categories. #mobilelearning #edtech,0.0,0
+98ae4949-8a9c-481c-911c-a3fa49eea244,extroverted,4,#3D printing practical application in schools: #archeology @user and #astronomy #business #computerscience.,0.0,1
+98ae4949-8a9c-481c-911c-a3fa49eea244,extroverted,5,@user is the most promising potential #wereabletechnology in #highereducation. #k12 #edtech #edchat #education #googleglass #glass,0.0,1
+98ae4949-8a9c-481c-911c-a3fa49eea244,agreeable,1,"It kind of sucks that an employer can't trust your #GPA, but that's the way it is right now.",4.910329283763291,1
+98ae4949-8a9c-481c-911c-a3fa49eea244,agreeable,2,Educational apps are the second-most downloaded in #iTunes of all categories. #mobilelearning #edtech,0.0,1
+98ae4949-8a9c-481c-911c-a3fa49eea244,agreeable,3,#3D printing practical application in schools: #archeology @user and #astronomy #business #computerscience.,0.0,0
+98ae4949-8a9c-481c-911c-a3fa49eea244,agreeable,4,@user is the most promising potential #wereabletechnology in #highereducation. #k12 #edtech #edchat #education #googleglass #glass,0.0,0
+98ae4949-8a9c-481c-911c-a3fa49eea244,agreeable,5,@user I look forward to starting a Code Club in Italy in September! #code,0.0,1
+98ae4949-8a9c-481c-911c-a3fa49eea244,stable,1,Educational apps are the second-most downloaded in #iTunes of all categories. #mobilelearning #edtech,0.0,1
+98ae4949-8a9c-481c-911c-a3fa49eea244,stable,2,#3D printing practical application in schools: #archeology @user and #astronomy #business #computerscience.,0.0,1
+98ae4949-8a9c-481c-911c-a3fa49eea244,stable,3,@user is the most promising potential #wereabletechnology in #highereducation. #k12 #edtech #edchat #education #googleglass #glass,0.0,0
+98ae4949-8a9c-481c-911c-a3fa49eea244,stable,4,@user I look forward to starting a Code Club in Italy in September! #code,0.0,0
+98ae4949-8a9c-481c-911c-a3fa49eea244,stable,5,10 places where anyone can #learntocode http #code #STEM #education #youth #skills #K12 #edtech,0.0,1
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,open,1,7 d'Abril: World Health Day 2013: Spotlight on Food and High Blood Pressure http via @user,0.0,1
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,open,2,The World as a Village http via @user #infografia,0.0,1
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,open,3,The World as 100 People http via @user #infografia,0.0,1
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,open,4,Interesante #infografia How to Prevent Child Sexual Abuse http,0.0,0
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,open,5,"If We Can't Change Culture, then we don't need to exist: http",0.0,1
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,conscientious,1,7 d'Abril: World Health Day 2013: Spotlight on Food and High Blood Pressure http via @user,0.0,1
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,conscientious,2,The World as a Village http via @user #infografia,0.0,0
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,conscientious,3,The World as 100 People http via @user #infografia,0.0,0
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,conscientious,4,Interesante #infografia How to Prevent Child Sexual Abuse http,0.0,0
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,conscientious,5,"If We Can't Change Culture, then we don't need to exist: http",0.0,1
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,extroverted,1,7 Levels of Social Media Engagement | Social Media Today http,7.421401213694128,1
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,extroverted,2,RT @user: Using Social Media to Save Women’s Lives | Social Media Today http,6.851690893964665,1
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,extroverted,3,RT @user: The Future Of Social Shopping | The Social Customer http (interesante para @user),6.680739955961338,1
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,extroverted,4,RT @user: Do Social Customers Really Want a Relationship with Your Brand? | The Social Customer http,6.363213290622328,1
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,extroverted,5,Making the Case for Social Customer Service Via: @user http,5.460114392905576,0
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,agreeable,1,7 d'Abril: World Health Day 2013: Spotlight on Food and High Blood Pressure http via @user,0.0,1
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,agreeable,2,The World as a Village http via @user #infografia,0.0,1
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,agreeable,3,The World as 100 People http via @user #infografia,0.0,1
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,agreeable,4,Interesante #infografia How to Prevent Child Sexual Abuse http,0.0,1
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,agreeable,5,"If We Can't Change Culture, then we don't need to exist: http",0.0,1
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,stable,1,7 d'Abril: World Health Day 2013: Spotlight on Food and High Blood Pressure http via @user,0.0,1
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,stable,2,The World as a Village http via @user #infografia,0.0,0
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,stable,3,The World as 100 People http via @user #infografia,0.0,1
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,stable,4,Interesante #infografia How to Prevent Child Sexual Abuse http,0.0,0
+44bbcf3e-3e13-494b-88c5-a3b35c57a57a,stable,5,"If We Can't Change Culture, then we don't need to exist: http",0.0,1
+b241472e-726a-4d12-aa9f-34c0a88b550e,open,1,@user Rooojoooo fuiste a la Monster?,0.0,1
+b241472e-726a-4d12-aa9f-34c0a88b550e,open,2,Little things ?,0.0,1
+b241472e-726a-4d12-aa9f-34c0a88b550e,open,3,"I know you ner love the sound of your voice on tape, you never want to know how much you weigh but you're perfect to me...",0.0,0
+b241472e-726a-4d12-aa9f-34c0a88b550e,open,4,Loving little things!!!,0.0,1
+b241472e-726a-4d12-aa9f-34c0a88b550e,open,5,"@user little things, salió hoy, esta super bonita!",0.0,1
+b241472e-726a-4d12-aa9f-34c0a88b550e,conscientious,1,@user Rooojoooo fuiste a la Monster?,0.0,1
+b241472e-726a-4d12-aa9f-34c0a88b550e,conscientious,2,Little things ?,0.0,1
+b241472e-726a-4d12-aa9f-34c0a88b550e,conscientious,3,"I know you ner love the sound of your voice on tape, you never want to know how much you weigh but you're perfect to me...",0.0,1
+b241472e-726a-4d12-aa9f-34c0a88b550e,conscientious,4,Loving little things!!!,0.0,1
+b241472e-726a-4d12-aa9f-34c0a88b550e,conscientious,5,"@user little things, salió hoy, esta super bonita!",0.0,1
+b241472e-726a-4d12-aa9f-34c0a88b550e,extroverted,1,"“@user: Because that's what friends do, they fall in love with each other...” The worst mistake someone can make",4.549451809361624,1
+b241472e-726a-4d12-aa9f-34c0a88b550e,extroverted,2,@user Rooojoooo fuiste a la Monster?,0.0,1
+b241472e-726a-4d12-aa9f-34c0a88b550e,extroverted,3,Little things ?,0.0,1
+b241472e-726a-4d12-aa9f-34c0a88b550e,extroverted,4,"I know you ner love the sound of your voice on tape, you never want to know how much you weigh but you're perfect to me...",0.0,1
+b241472e-726a-4d12-aa9f-34c0a88b550e,extroverted,5,Loving little things!!!,0.0,1
+b241472e-726a-4d12-aa9f-34c0a88b550e,agreeable,1,@user Rooojoooo fuiste a la Monster?,0.0,1
+b241472e-726a-4d12-aa9f-34c0a88b550e,agreeable,2,Little things ?,0.0,1
+b241472e-726a-4d12-aa9f-34c0a88b550e,agreeable,3,"I know you ner love the sound of your voice on tape, you never want to know how much you weigh but you're perfect to me...",0.0,1
+b241472e-726a-4d12-aa9f-34c0a88b550e,agreeable,4,Loving little things!!!,0.0,0
+b241472e-726a-4d12-aa9f-34c0a88b550e,agreeable,5,"@user little things, salió hoy, esta super bonita!",0.0,0
+b241472e-726a-4d12-aa9f-34c0a88b550e,stable,1,@user Rooojoooo fuiste a la Monster?,0.0,1
+b241472e-726a-4d12-aa9f-34c0a88b550e,stable,2,Little things ?,0.0,1
+b241472e-726a-4d12-aa9f-34c0a88b550e,stable,3,"I know you ner love the sound of your voice on tape, you never want to know how much you weigh but you're perfect to me...",0.0,0
+b241472e-726a-4d12-aa9f-34c0a88b550e,stable,4,Loving little things!!!,0.0,1
+b241472e-726a-4d12-aa9f-34c0a88b550e,stable,5,"@user little things, salió hoy, esta super bonita!",0.0,1
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,open,1,"#Diadelperro We're liars, poor liars trying to mystify one another",0.0,1
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,open,2,Society doesn't recognize this kind of felicity :D,0.0,1
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,open,3,"We are poetry, we are floating creatures, sometimes happy!",0.0,1
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,open,4,#purapinshipartymexicana escuchando The Tigers of North!,0.0,0
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,open,5,Acabo de utilizar #Shazam para taguear Only You-Clean Radio Mix de 112 Feat. The Notorious B.I.G.. http,0.0,0
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,conscientious,1,"#Diadelperro We're liars, poor liars trying to mystify one another",0.0,1
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,conscientious,2,Society doesn't recognize this kind of felicity :D,0.0,1
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,conscientious,3,"We are poetry, we are floating creatures, sometimes happy!",0.0,1
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,conscientious,4,#purapinshipartymexicana escuchando The Tigers of North!,0.0,1
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,conscientious,5,Acabo de utilizar #Shazam para taguear Only You-Clean Radio Mix de 112 Feat. The Notorious B.I.G.. http,0.0,1
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,extroverted,1,To be happy we need to improve our social skills,5.460114392905576,1
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,extroverted,2,"#Diadelperro We're liars, poor liars trying to mystify one another",0.0,1
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,extroverted,3,Society doesn't recognize this kind of felicity :D,0.0,1
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,extroverted,4,"We are poetry, we are floating creatures, sometimes happy!",0.0,1
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,extroverted,5,#purapinshipartymexicana escuchando The Tigers of North!,0.0,0
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,agreeable,1,Society doesn't recognize this kind of felicity :D,7.308810923107181,1
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,agreeable,2,"#Diadelperro We're liars, poor liars trying to mystify one another",0.0,1
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,agreeable,3,"We are poetry, we are floating creatures, sometimes happy!",0.0,0
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,agreeable,4,#purapinshipartymexicana escuchando The Tigers of North!,0.0,1
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,agreeable,5,Acabo de utilizar #Shazam para taguear Only You-Clean Radio Mix de 112 Feat. The Notorious B.I.G.. http,0.0,0
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,stable,1,"#Diadelperro We're liars, poor liars trying to mystify one another",0.0,1
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,stable,2,Society doesn't recognize this kind of felicity :D,0.0,1
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,stable,3,"We are poetry, we are floating creatures, sometimes happy!",0.0,1
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,stable,4,#purapinshipartymexicana escuchando The Tigers of North!,0.0,0
+7d9dd568-738c-4c6d-9074-52b6fa9f6bb6,stable,5,Acabo de utilizar #Shazam para taguear Only You-Clean Radio Mix de 112 Feat. The Notorious B.I.G.. http,0.0,0
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,open,1,don't happy be worry,0.0,1
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,open,2,someone please give this cat some bacon http,0.0,1
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,open,3,"due gatti #afterlight #milano #rooftop @user Milan, Italy http",0.0,1
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,open,4,astro_kit's photo http,0.0,1
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,open,5,#swag with @user haha @user IED MASTER http,0.0,1
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,conscientious,1,don't happy be worry,0.0,1
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,conscientious,2,someone please give this cat some bacon http,0.0,1
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,conscientious,3,"due gatti #afterlight #milano #rooftop @user Milan, Italy http",0.0,0
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,conscientious,4,astro_kit's photo http,0.0,1
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,conscientious,5,#swag with @user haha @user IED MASTER http,0.0,1
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,extroverted,1,"London, you mad, eccentric, cold, and outrageously expensive, fun and ridiculous place. You will always have a... http",4.814046661987343,1
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,extroverted,2,don't happy be worry,0.0,1
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,extroverted,3,someone please give this cat some bacon http,0.0,1
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,extroverted,4,"due gatti #afterlight #milano #rooftop @user Milan, Italy http",0.0,1
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,extroverted,5,astro_kit's photo http,0.0,0
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,agreeable,1,my kind of nap http,8.432095714505394,1
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,agreeable,2,don't happy be worry,0.0,1
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,agreeable,3,someone please give this cat some bacon http,0.0,1
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,agreeable,4,"due gatti #afterlight #milano #rooftop @user Milan, Italy http",0.0,0
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,agreeable,5,astro_kit's photo http,0.0,0
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,stable,1,don't happy be worry,0.0,1
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,stable,2,someone please give this cat some bacon http,0.0,0
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,stable,3,"due gatti #afterlight #milano #rooftop @user Milan, Italy http",0.0,1
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,stable,4,astro_kit's photo http,0.0,0
+61c4aca8-6e7f-4da3-9b30-1f99f7656189,stable,5,#swag with @user haha @user IED MASTER http,0.0,0
+c99cf020-7a0c-4809-928a-374b1ee85dd8,open,1,U2 - 11 O'Clock Tick Tock: http MoA #U2newwave,0.0,1
+c99cf020-7a0c-4809-928a-374b1ee85dd8,open,2,U2 - I Fall Down http #U2newwave,0.0,1
+c99cf020-7a0c-4809-928a-374b1ee85dd8,open,3,@user I see what you did there.,0.0,1
+c99cf020-7a0c-4809-928a-374b1ee85dd8,open,4,Nothing To Be Worried About Except Everything But You - Girless & The Orphan http via @user,0.0,1
+c99cf020-7a0c-4809-928a-374b1ee85dd8,open,5,accendere @user e beccare Take Five. #priceless,0.0,0
+c99cf020-7a0c-4809-928a-374b1ee85dd8,conscientious,1,U2 - 11 O'Clock Tick Tock: http MoA #U2newwave,0.0,1
+c99cf020-7a0c-4809-928a-374b1ee85dd8,conscientious,2,U2 - I Fall Down http #U2newwave,0.0,1
+c99cf020-7a0c-4809-928a-374b1ee85dd8,conscientious,3,@user I see what you did there.,0.0,1
+c99cf020-7a0c-4809-928a-374b1ee85dd8,conscientious,4,Nothing To Be Worried About Except Everything But You - Girless & The Orphan http via @user,0.0,1
+c99cf020-7a0c-4809-928a-374b1ee85dd8,conscientious,5,accendere @user e beccare Take Five. #priceless,0.0,0
+c99cf020-7a0c-4809-928a-374b1ee85dd8,extroverted,1,U2 - 11 O'Clock Tick Tock: http MoA #U2newwave,0.0,1
+c99cf020-7a0c-4809-928a-374b1ee85dd8,extroverted,2,U2 - I Fall Down http #U2newwave,0.0,1
+c99cf020-7a0c-4809-928a-374b1ee85dd8,extroverted,3,@user I see what you did there.,0.0,1
+c99cf020-7a0c-4809-928a-374b1ee85dd8,extroverted,4,Nothing To Be Worried About Except Everything But You - Girless & The Orphan http via @user,0.0,1
+c99cf020-7a0c-4809-928a-374b1ee85dd8,extroverted,5,accendere @user e beccare Take Five. #priceless,0.0,0
+c99cf020-7a0c-4809-928a-374b1ee85dd8,agreeable,1,U2 - 11 O'Clock Tick Tock: http MoA #U2newwave,0.0,1
+c99cf020-7a0c-4809-928a-374b1ee85dd8,agreeable,2,U2 - I Fall Down http #U2newwave,0.0,1
+c99cf020-7a0c-4809-928a-374b1ee85dd8,agreeable,3,@user I see what you did there.,0.0,1
+c99cf020-7a0c-4809-928a-374b1ee85dd8,agreeable,4,Nothing To Be Worried About Except Everything But You - Girless & The Orphan http via @user,0.0,1
+c99cf020-7a0c-4809-928a-374b1ee85dd8,agreeable,5,accendere @user e beccare Take Five. #priceless,0.0,1
+c99cf020-7a0c-4809-928a-374b1ee85dd8,stable,1,U2 - 11 O'Clock Tick Tock: http MoA #U2newwave,0.0,1
+c99cf020-7a0c-4809-928a-374b1ee85dd8,stable,2,U2 - I Fall Down http #U2newwave,0.0,0
+c99cf020-7a0c-4809-928a-374b1ee85dd8,stable,3,@user I see what you did there.,0.0,1
+c99cf020-7a0c-4809-928a-374b1ee85dd8,stable,4,Nothing To Be Worried About Except Everything But You - Girless & The Orphan http via @user,0.0,0
+c99cf020-7a0c-4809-928a-374b1ee85dd8,stable,5,accendere @user e beccare Take Five. #priceless,0.0,1
+99710477-8e8f-4387-b228-d8cc1ca86d17,open,1,"Seeing some people giving highest importance to 'Love', I really feel surprised. Love is the last thing in my... http",0.0,1
+99710477-8e8f-4387-b228-d8cc1ca86d17,open,2,All girls are same. They try so much to show off that they care that at the end of the day it is more a pain than anything else.,0.0,1
+99710477-8e8f-4387-b228-d8cc1ca86d17,open,3,"Just heard a superhit song ""I want to hit somebody"". What lyrics! Even better than Zandu balm. Thanks to the autowala.",0.0,0
+99710477-8e8f-4387-b228-d8cc1ca86d17,open,4,I wish everybody have more reasons to live... I have mine.,0.0,1
+99710477-8e8f-4387-b228-d8cc1ca86d17,open,5,"All right... for a change let's exchange some gyan. what is meant by ""Boga""???",0.0,1
+99710477-8e8f-4387-b228-d8cc1ca86d17,conscientious,1,"Seeing some people giving highest importance to 'Love', I really feel surprised. Love is the last thing in my... http",0.0,1
+99710477-8e8f-4387-b228-d8cc1ca86d17,conscientious,2,All girls are same. They try so much to show off that they care that at the end of the day it is more a pain than anything else.,0.0,0
+99710477-8e8f-4387-b228-d8cc1ca86d17,conscientious,3,"Just heard a superhit song ""I want to hit somebody"". What lyrics! Even better than Zandu balm. Thanks to the autowala.",0.0,1
+99710477-8e8f-4387-b228-d8cc1ca86d17,conscientious,4,I wish everybody have more reasons to live... I have mine.,0.0,1
+99710477-8e8f-4387-b228-d8cc1ca86d17,conscientious,5,"All right... for a change let's exchange some gyan. what is meant by ""Boga""???",0.0,0
+99710477-8e8f-4387-b228-d8cc1ca86d17,extroverted,1,"Seeing some people giving highest importance to 'Love', I really feel surprised. Love is the last thing in my... http",0.0,1
+99710477-8e8f-4387-b228-d8cc1ca86d17,extroverted,2,All girls are same. They try so much to show off that they care that at the end of the day it is more a pain than anything else.,0.0,1
+99710477-8e8f-4387-b228-d8cc1ca86d17,extroverted,3,"Just heard a superhit song ""I want to hit somebody"". What lyrics! Even better than Zandu balm. Thanks to the autowala.",0.0,1
+99710477-8e8f-4387-b228-d8cc1ca86d17,extroverted,4,I wish everybody have more reasons to live... I have mine.,0.0,1
+99710477-8e8f-4387-b228-d8cc1ca86d17,extroverted,5,"All right... for a change let's exchange some gyan. what is meant by ""Boga""???",0.0,0
+99710477-8e8f-4387-b228-d8cc1ca86d17,agreeable,1,A friendly suggestion to a friend: Please check what you are posting. Or people will have wrong interpretation.,6.909554438311926,0
+99710477-8e8f-4387-b228-d8cc1ca86d17,agreeable,2,"Seeing some people giving highest importance to 'Love', I really feel surprised. Love is the last thing in my... http",0.0,1
+99710477-8e8f-4387-b228-d8cc1ca86d17,agreeable,3,All girls are same. They try so much to show off that they care that at the end of the day it is more a pain than anything else.,0.0,1
+99710477-8e8f-4387-b228-d8cc1ca86d17,agreeable,4,"Just heard a superhit song ""I want to hit somebody"". What lyrics! Even better than Zandu balm. Thanks to the autowala.",0.0,1
+99710477-8e8f-4387-b228-d8cc1ca86d17,agreeable,5,I wish everybody have more reasons to live... I have mine.,0.0,0
+99710477-8e8f-4387-b228-d8cc1ca86d17,stable,1,"RT @user Of course the doctors & staff fled, what else would explain the ratio of staff & patient casualties - 70:3 #AMRI.",5.770486265372974,0
+99710477-8e8f-4387-b228-d8cc1ca86d17,stable,2,"Seeing some people giving highest importance to 'Love', I really feel surprised. Love is the last thing in my... http",0.0,1
+99710477-8e8f-4387-b228-d8cc1ca86d17,stable,3,All girls are same. They try so much to show off that they care that at the end of the day it is more a pain than anything else.,0.0,0
+99710477-8e8f-4387-b228-d8cc1ca86d17,stable,4,"Just heard a superhit song ""I want to hit somebody"". What lyrics! Even better than Zandu balm. Thanks to the autowala.",0.0,1
+99710477-8e8f-4387-b228-d8cc1ca86d17,stable,5,I wish everybody have more reasons to live... I have mine.,0.0,1
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,open,1,Still haven't found a clear copy of Haider ????,0.0,1
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,open,2,"Yaay! Thank you ???? @user: ""@user: Still haven't found a clear copy of Haider ????"" it's on http",0.0,1
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,open,3,Smart Cities http,0.0,0
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,open,4,Governing Urban features and what cities are expected to be like in 2015.,0.0,1
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,open,5,A data driven approach towards more livable cities.,0.0,0
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,conscientious,1,Still haven't found a clear copy of Haider ????,0.0,1
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,conscientious,2,"Yaay! Thank you ???? @user: ""@user: Still haven't found a clear copy of Haider ????"" it's on http",0.0,1
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,conscientious,3,Smart Cities http,0.0,0
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,conscientious,4,Governing Urban features and what cities are expected to be like in 2015.,0.0,0
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,conscientious,5,A data driven approach towards more livable cities.,0.0,1
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,extroverted,1,Still haven't found a clear copy of Haider ????,0.0,1
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,extroverted,2,"Yaay! Thank you ???? @user: ""@user: Still haven't found a clear copy of Haider ????"" it's on http",0.0,1
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,extroverted,3,Smart Cities http,0.0,0
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,extroverted,4,Governing Urban features and what cities are expected to be like in 2015.,0.0,0
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,extroverted,5,A data driven approach towards more livable cities.,0.0,1
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,agreeable,1,Still haven't found a clear copy of Haider ????,0.0,1
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,agreeable,2,"Yaay! Thank you ???? @user: ""@user: Still haven't found a clear copy of Haider ????"" it's on http",0.0,1
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,agreeable,3,Smart Cities http,0.0,0
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,agreeable,4,Governing Urban features and what cities are expected to be like in 2015.,0.0,0
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,agreeable,5,A data driven approach towards more livable cities.,0.0,1
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,stable,1,"Abun huashi ???????? @user: ????""@user Lol... Some Malo guys steady bulshiting ???????????????? it's no longer do you know who my father is... It's ""Do",5.718781117715861,1
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,stable,2,"Asin! Still in shock ???????????? @user: Mumu ""@user: Lol Some Malo guys steady bulshiting it's no longer do u know who my father is... It's",5.574074836268066,1
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,stable,3,"Lol... Some Malo guys steady bulshiting ???????????????? it's no longer do you know who my father is... It's ""Do you know who my sisters are?"" ????????????",5.436511030437576,0
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,stable,4,Still haven't found a clear copy of Haider ????,0.0,1
+b97f1cd0-d653-4a61-bd79-46ec6d10a404,stable,5,"Yaay! Thank you ???? @user: ""@user: Still haven't found a clear copy of Haider ????"" it's on http",0.0,1
+783c632c-ea3a-4989-8149-c5078dc647db,open,1,Dev leaves minor bug in App -> User gives 1-star rating -> Dev fixes bug -> User never changes rating -.-,0.0,0
+783c632c-ea3a-4989-8149-c5078dc647db,open,2,Do not touch http,0.0,0
+783c632c-ea3a-4989-8149-c5078dc647db,open,3,"Coding early in the morning and wondering why Eclipse for Java marks ""for i in range(10)"" -.- #python",0.0,1
+783c632c-ea3a-4989-8149-c5078dc647db,open,4,After feedly the online reader and chrome extension @user pro replaces Google Reader for me now.,0.0,0
+783c632c-ea3a-4989-8149-c5078dc647db,open,5,"Well, thx for this elaborate review -.- http",0.0,1
+783c632c-ea3a-4989-8149-c5078dc647db,conscientious,1,Dev leaves minor bug in App -> User gives 1-star rating -> Dev fixes bug -> User never changes rating -.-,0.0,1
+783c632c-ea3a-4989-8149-c5078dc647db,conscientious,2,Do not touch http,0.0,1
+783c632c-ea3a-4989-8149-c5078dc647db,conscientious,3,"Coding early in the morning and wondering why Eclipse for Java marks ""for i in range(10)"" -.- #python",0.0,1
+783c632c-ea3a-4989-8149-c5078dc647db,conscientious,4,After feedly the online reader and chrome extension @user pro replaces Google Reader for me now.,0.0,1
+783c632c-ea3a-4989-8149-c5078dc647db,conscientious,5,"Well, thx for this elaborate review -.- http",0.0,1
+783c632c-ea3a-4989-8149-c5078dc647db,extroverted,1,Dev leaves minor bug in App -> User gives 1-star rating -> Dev fixes bug -> User never changes rating -.-,0.0,1
+783c632c-ea3a-4989-8149-c5078dc647db,extroverted,2,Do not touch http,0.0,1
+783c632c-ea3a-4989-8149-c5078dc647db,extroverted,3,"Coding early in the morning and wondering why Eclipse for Java marks ""for i in range(10)"" -.- #python",0.0,0
+783c632c-ea3a-4989-8149-c5078dc647db,extroverted,4,After feedly the online reader and chrome extension @user pro replaces Google Reader for me now.,0.0,0
+783c632c-ea3a-4989-8149-c5078dc647db,extroverted,5,"Well, thx for this elaborate review -.- http",0.0,0
+783c632c-ea3a-4989-8149-c5078dc647db,agreeable,1,I'm probably the only one who didn't know there's some kind of holiday today in fribourg. View through 4 empty rooms http,4.506960749741071,1
+783c632c-ea3a-4989-8149-c5078dc647db,agreeable,2,Dev leaves minor bug in App -> User gives 1-star rating -> Dev fixes bug -> User never changes rating -.-,0.0,1
+783c632c-ea3a-4989-8149-c5078dc647db,agreeable,3,Do not touch http,0.0,1
+783c632c-ea3a-4989-8149-c5078dc647db,agreeable,4,"Coding early in the morning and wondering why Eclipse for Java marks ""for i in range(10)"" -.- #python",0.0,1
+783c632c-ea3a-4989-8149-c5078dc647db,agreeable,5,After feedly the online reader and chrome extension @user pro replaces Google Reader for me now.,0.0,1
+783c632c-ea3a-4989-8149-c5078dc647db,stable,1,Dev leaves minor bug in App -> User gives 1-star rating -> Dev fixes bug -> User never changes rating -.-,0.0,1
+783c632c-ea3a-4989-8149-c5078dc647db,stable,2,Do not touch http,0.0,1
+783c632c-ea3a-4989-8149-c5078dc647db,stable,3,"Coding early in the morning and wondering why Eclipse for Java marks ""for i in range(10)"" -.- #python",0.0,0
+783c632c-ea3a-4989-8149-c5078dc647db,stable,4,After feedly the online reader and chrome extension @user pro replaces Google Reader for me now.,0.0,0
+783c632c-ea3a-4989-8149-c5078dc647db,stable,5,"Well, thx for this elaborate review -.- http",0.0,1
+6a3addbf-f699-482d-ba2f-02248d52db95,open,1,Creative thinking session w/ the Academic Dean & Academic Directors of our Master Programs. #creativity #innovation http,5.565976184182832,1
+6a3addbf-f699-482d-ba2f-02248d52db95,open,2,“@user: The Lost Art of Free Time http http Creative persons need this time to be mentally replenished.,5.394820300334608,1
+6a3addbf-f699-482d-ba2f-02248d52db95,open,3,"#Happiness is the secret ingredient to #success. Our brains are more engaged, creative & resilient when in a positive state. Happy...",4.939175707676433,1
+6a3addbf-f699-482d-ba2f-02248d52db95,open,4,The colleagues of our Competence Center 'The Future #Leadership Initiative' need your help to complete their Survey http,0.0,1
+6a3addbf-f699-482d-ba2f-02248d52db95,open,5,Geweldig motto! :-) 'Don't ever let anyone dull your sparkle!' #LuckyGirl #Happiness http,0.0,1
+6a3addbf-f699-482d-ba2f-02248d52db95,conscientious,1,The colleagues of our Competence Center 'The Future #Leadership Initiative' need your help to complete their Survey http,0.0,0
+6a3addbf-f699-482d-ba2f-02248d52db95,conscientious,2,Geweldig motto! :-) 'Don't ever let anyone dull your sparkle!' #LuckyGirl #Happiness http,0.0,1
+6a3addbf-f699-482d-ba2f-02248d52db95,conscientious,3,Bij ons is het net andersom: Chief IDEA Initiator VP says GO VP of Move on VP of Let's do this And so on.. :-) @user,0.0,1
+6a3addbf-f699-482d-ba2f-02248d52db95,conscientious,4,"The Future Employee: Works anytime, works anywhere, uses any device, focuses on output and creates his or her onw la…http",0.0,1
+6a3addbf-f699-482d-ba2f-02248d52db95,conscientious,5,@user there is none,0.0,1
+6a3addbf-f699-482d-ba2f-02248d52db95,extroverted,1,The colleagues of our Competence Center 'The Future #Leadership Initiative' need your help to complete their Survey http,0.0,1
+6a3addbf-f699-482d-ba2f-02248d52db95,extroverted,2,Geweldig motto! :-) 'Don't ever let anyone dull your sparkle!' #LuckyGirl #Happiness http,0.0,1
+6a3addbf-f699-482d-ba2f-02248d52db95,extroverted,3,Bij ons is het net andersom: Chief IDEA Initiator VP says GO VP of Move on VP of Let's do this And so on.. :-) @user,0.0,1
+6a3addbf-f699-482d-ba2f-02248d52db95,extroverted,4,"The Future Employee: Works anytime, works anywhere, uses any device, focuses on output and creates his or her onw la…http",0.0,0
+6a3addbf-f699-482d-ba2f-02248d52db95,extroverted,5,@user there is none,0.0,1
+6a3addbf-f699-482d-ba2f-02248d52db95,agreeable,1,The colleagues of our Competence Center 'The Future #Leadership Initiative' need your help to complete their Survey http,0.0,1
+6a3addbf-f699-482d-ba2f-02248d52db95,agreeable,2,Geweldig motto! :-) 'Don't ever let anyone dull your sparkle!' #LuckyGirl #Happiness http,0.0,1
+6a3addbf-f699-482d-ba2f-02248d52db95,agreeable,3,Bij ons is het net andersom: Chief IDEA Initiator VP says GO VP of Move on VP of Let's do this And so on.. :-) @user,0.0,1
+6a3addbf-f699-482d-ba2f-02248d52db95,agreeable,4,"The Future Employee: Works anytime, works anywhere, uses any device, focuses on output and creates his or her onw la…http",0.0,0
+6a3addbf-f699-482d-ba2f-02248d52db95,agreeable,5,@user there is none,0.0,1
+6a3addbf-f699-482d-ba2f-02248d52db95,stable,1,The colleagues of our Competence Center 'The Future #Leadership Initiative' need your help to complete their Survey http,0.0,1
+6a3addbf-f699-482d-ba2f-02248d52db95,stable,2,Geweldig motto! :-) 'Don't ever let anyone dull your sparkle!' #LuckyGirl #Happiness http,0.0,1
+6a3addbf-f699-482d-ba2f-02248d52db95,stable,3,Bij ons is het net andersom: Chief IDEA Initiator VP says GO VP of Move on VP of Let's do this And so on.. :-) @user,0.0,0
+6a3addbf-f699-482d-ba2f-02248d52db95,stable,4,"The Future Employee: Works anytime, works anywhere, uses any device, focuses on output and creates his or her onw la…http",0.0,1
+6a3addbf-f699-482d-ba2f-02248d52db95,stable,5,@user there is none,0.0,1
+f707b0c7-f11f-480c-b859-c38ecfa201e2,open,1,Glamour Moddel ???? had to be one lol,0.0,1
+f707b0c7-f11f-480c-b859-c38ecfa201e2,open,2,Did she just say she wouldn't do it for free ????????????????????????????,0.0,0
+f707b0c7-f11f-480c-b859-c38ecfa201e2,open,3,Did you see how she kissed Uncle ???????????????? Nah I'm take her round the corner uno,0.0,1
+f707b0c7-f11f-480c-b859-c38ecfa201e2,open,4,I'm taking her round the corner IDC ????,0.0,0
+f707b0c7-f11f-480c-b859-c38ecfa201e2,open,5,“@user: Plot twist: Big brother shows Them what she's being saying about them”< I'm suspecting this too,0.0,0
+f707b0c7-f11f-480c-b859-c38ecfa201e2,conscientious,1,Glamour Moddel ???? had to be one lol,0.0,1
+f707b0c7-f11f-480c-b859-c38ecfa201e2,conscientious,2,Did she just say she wouldn't do it for free ????????????????????????????,0.0,1
+f707b0c7-f11f-480c-b859-c38ecfa201e2,conscientious,3,Did you see how she kissed Uncle ???????????????? Nah I'm take her round the corner uno,0.0,1
+f707b0c7-f11f-480c-b859-c38ecfa201e2,conscientious,4,I'm taking her round the corner IDC ????,0.0,1
+f707b0c7-f11f-480c-b859-c38ecfa201e2,conscientious,5,“@user: Plot twist: Big brother shows Them what she's being saying about them”< I'm suspecting this too,0.0,1
+f707b0c7-f11f-480c-b859-c38ecfa201e2,extroverted,1,You know them ppl that know everyone at a party so they make the most noise and do the most ????,4.620054832661007,1
+f707b0c7-f11f-480c-b859-c38ecfa201e2,extroverted,2,Glamour Moddel ???? had to be one lol,0.0,1
+f707b0c7-f11f-480c-b859-c38ecfa201e2,extroverted,3,Did she just say she wouldn't do it for free ????????????????????????????,0.0,1
+f707b0c7-f11f-480c-b859-c38ecfa201e2,extroverted,4,Did you see how she kissed Uncle ???????????????? Nah I'm take her round the corner uno,0.0,1
+f707b0c7-f11f-480c-b859-c38ecfa201e2,extroverted,5,I'm taking her round the corner IDC ????,0.0,1
+f707b0c7-f11f-480c-b859-c38ecfa201e2,agreeable,1,Glamour Moddel ???? had to be one lol,0.0,1
+f707b0c7-f11f-480c-b859-c38ecfa201e2,agreeable,2,Did she just say she wouldn't do it for free ????????????????????????????,0.0,1
+f707b0c7-f11f-480c-b859-c38ecfa201e2,agreeable,3,Did you see how she kissed Uncle ???????????????? Nah I'm take her round the corner uno,0.0,1
+f707b0c7-f11f-480c-b859-c38ecfa201e2,agreeable,4,I'm taking her round the corner IDC ????,0.0,1
+f707b0c7-f11f-480c-b859-c38ecfa201e2,agreeable,5,“@user: Plot twist: Big brother shows Them what she's being saying about them”< I'm suspecting this too,0.0,1
+f707b0c7-f11f-480c-b859-c38ecfa201e2,stable,1,Glamour Moddel ???? had to be one lol,0.0,1
+f707b0c7-f11f-480c-b859-c38ecfa201e2,stable,2,Did she just say she wouldn't do it for free ????????????????????????????,0.0,1
+f707b0c7-f11f-480c-b859-c38ecfa201e2,stable,3,Did you see how she kissed Uncle ???????????????? Nah I'm take her round the corner uno,0.0,0
+f707b0c7-f11f-480c-b859-c38ecfa201e2,stable,4,I'm taking her round the corner IDC ????,0.0,0
+f707b0c7-f11f-480c-b859-c38ecfa201e2,stable,5,“@user: Plot twist: Big brother shows Them what she's being saying about them”< I'm suspecting this too,0.0,0
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,open,1,Apple vs. Google: The smartphone smackdown - How the World Works - Salon.com http,0.0,1
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,open,2,"@user Coincidentally, a recent French piece places Busa's work in its historical context : http #digitalhumanities",0.0,1
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,open,3,@user @user the chair we have just lost seemed to be going in the right direction in that respect #teiputsch,0.0,1
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,open,4,@user @user keeping the community informed is not seemingly a priority for the plotters #teiputsch,0.0,1
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,open,5,@user @user believe me the only sane voting member present also feels blindsided #teiputsch,0.0,0
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,conscientious,1,Apple vs. Google: The smartphone smackdown - How the World Works - Salon.com http,0.0,0
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,conscientious,2,"@user Coincidentally, a recent French piece places Busa's work in its historical context : http #digitalhumanities",0.0,1
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,conscientious,3,@user @user the chair we have just lost seemed to be going in the right direction in that respect #teiputsch,0.0,1
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,conscientious,4,@user @user keeping the community informed is not seemingly a priority for the plotters #teiputsch,0.0,1
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,conscientious,5,@user @user believe me the only sane voting member present also feels blindsided #teiputsch,0.0,1
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,extroverted,1,Apple vs. Google: The smartphone smackdown - How the World Works - Salon.com http,0.0,1
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,extroverted,2,"@user Coincidentally, a recent French piece places Busa's work in its historical context : http #digitalhumanities",0.0,1
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,extroverted,3,@user @user the chair we have just lost seemed to be going in the right direction in that respect #teiputsch,0.0,1
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,extroverted,4,@user @user keeping the community informed is not seemingly a priority for the plotters #teiputsch,0.0,0
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,extroverted,5,@user @user believe me the only sane voting member present also feels blindsided #teiputsch,0.0,1
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,agreeable,1,Apple vs. Google: The smartphone smackdown - How the World Works - Salon.com http,0.0,1
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,agreeable,2,"@user Coincidentally, a recent French piece places Busa's work in its historical context : http #digitalhumanities",0.0,1
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,agreeable,3,@user @user the chair we have just lost seemed to be going in the right direction in that respect #teiputsch,0.0,0
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,agreeable,4,@user @user keeping the community informed is not seemingly a priority for the plotters #teiputsch,0.0,1
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,agreeable,5,@user @user believe me the only sane voting member present also feels blindsided #teiputsch,0.0,1
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,stable,1,Apple vs. Google: The smartphone smackdown - How the World Works - Salon.com http,0.0,1
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,stable,2,"@user Coincidentally, a recent French piece places Busa's work in its historical context : http #digitalhumanities",0.0,1
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,stable,3,@user @user the chair we have just lost seemed to be going in the right direction in that respect #teiputsch,0.0,1
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,stable,4,@user @user keeping the community informed is not seemingly a priority for the plotters #teiputsch,0.0,0
+9f4ca5ba-5075-446c-b93a-c0a93ce9bfbc,stable,5,@user @user believe me the only sane voting member present also feels blindsided #teiputsch,0.0,0
+e9254409-1af6-480a-a996-6bf55560d9f7,open,1,Why is it illegal to park in a handicapped parking space but its ok to use a handicapped toilet?,0.0,1
+e9254409-1af6-480a-a996-6bf55560d9f7,open,2,"In that song, she'll be coming around the mountain, who is she?",0.0,1
+e9254409-1af6-480a-a996-6bf55560d9f7,open,3,"#TeenNickTop10 Best Song Ever by @user because it is the best song ever, and the best vid. ever.",0.0,1
+e9254409-1af6-480a-a996-6bf55560d9f7,open,4,Heu guys no tweets for a week going on a vacation sorry :(,0.0,0
+e9254409-1af6-480a-a996-6bf55560d9f7,open,5,GUESS WHOS BACK!! I AM!!,0.0,0
+e9254409-1af6-480a-a996-6bf55560d9f7,conscientious,1,Why is it illegal to park in a handicapped parking space but its ok to use a handicapped toilet?,0.0,0
+e9254409-1af6-480a-a996-6bf55560d9f7,conscientious,2,"In that song, she'll be coming around the mountain, who is she?",0.0,1
+e9254409-1af6-480a-a996-6bf55560d9f7,conscientious,3,"#TeenNickTop10 Best Song Ever by @user because it is the best song ever, and the best vid. ever.",0.0,1
+e9254409-1af6-480a-a996-6bf55560d9f7,conscientious,4,Heu guys no tweets for a week going on a vacation sorry :(,0.0,1
+e9254409-1af6-480a-a996-6bf55560d9f7,conscientious,5,GUESS WHOS BACK!! I AM!!,0.0,0
+e9254409-1af6-480a-a996-6bf55560d9f7,extroverted,1,@user IT WAS SO MUCH FUN WATCHING U GUYS I LOVE U I DIDNT WANT IT TO END,4.814046661987343,1
+e9254409-1af6-480a-a996-6bf55560d9f7,extroverted,2,I used to make fun of my dog for barking at dogs on TV until I caught myself in the car pulling over for a siren on the radio.,3.597258821242863,1
+e9254409-1af6-480a-a996-6bf55560d9f7,extroverted,3,Why is it illegal to park in a handicapped parking space but its ok to use a handicapped toilet?,0.0,0
+e9254409-1af6-480a-a996-6bf55560d9f7,extroverted,4,"In that song, she'll be coming around the mountain, who is she?",0.0,0
+e9254409-1af6-480a-a996-6bf55560d9f7,extroverted,5,"#TeenNickTop10 Best Song Ever by @user because it is the best song ever, and the best vid. ever.",0.0,0
+e9254409-1af6-480a-a996-6bf55560d9f7,agreeable,1,Why is it illegal to park in a handicapped parking space but its ok to use a handicapped toilet?,0.0,1
+e9254409-1af6-480a-a996-6bf55560d9f7,agreeable,2,"In that song, she'll be coming around the mountain, who is she?",0.0,1
+e9254409-1af6-480a-a996-6bf55560d9f7,agreeable,3,"#TeenNickTop10 Best Song Ever by @user because it is the best song ever, and the best vid. ever.",0.0,0
+e9254409-1af6-480a-a996-6bf55560d9f7,agreeable,4,Heu guys no tweets for a week going on a vacation sorry :(,0.0,1
+e9254409-1af6-480a-a996-6bf55560d9f7,agreeable,5,GUESS WHOS BACK!! I AM!!,0.0,0
+e9254409-1af6-480a-a996-6bf55560d9f7,stable,1,Why is it illegal to park in a handicapped parking space but its ok to use a handicapped toilet?,0.0,1
+e9254409-1af6-480a-a996-6bf55560d9f7,stable,2,"In that song, she'll be coming around the mountain, who is she?",0.0,1
+e9254409-1af6-480a-a996-6bf55560d9f7,stable,3,"#TeenNickTop10 Best Song Ever by @user because it is the best song ever, and the best vid. ever.",0.0,1
+e9254409-1af6-480a-a996-6bf55560d9f7,stable,4,Heu guys no tweets for a week going on a vacation sorry :(,0.0,1
+e9254409-1af6-480a-a996-6bf55560d9f7,stable,5,GUESS WHOS BACK!! I AM!!,0.0,1
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,open,1,#Turing trying the eleventh doodle machine!!!,0.0,1
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,open,2,via @user RT: @user: What is an open notebook? Advocate @user explains: http,0.0,1
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,open,3,"#Turing and tomorrow, Hoare and Knuth among others...",0.0,1
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,open,4,The Church (1988) Destination orig. http live http,0.0,1
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,open,5,waiting for @user The Church (1992) Lustre http,0.0,0
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,conscientious,1,#Turing trying the eleventh doodle machine!!!,0.0,1
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,conscientious,2,via @user RT: @user: What is an open notebook? Advocate @user explains: http,0.0,1
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,conscientious,3,"#Turing and tomorrow, Hoare and Knuth among others...",0.0,1
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,conscientious,4,The Church (1988) Destination orig. http live http,0.0,0
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,conscientious,5,waiting for @user The Church (1992) Lustre http,0.0,1
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,extroverted,1,#Turing trying the eleventh doodle machine!!!,0.0,1
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,extroverted,2,via @user RT: @user: What is an open notebook? Advocate @user explains: http,0.0,1
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,extroverted,3,"#Turing and tomorrow, Hoare and Knuth among others...",0.0,1
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,extroverted,4,The Church (1988) Destination orig. http live http,0.0,1
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,extroverted,5,waiting for @user The Church (1992) Lustre http,0.0,1
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,agreeable,1,@user that kind ot stats or criteria are *very* relative: I was not on top third of my class... [deception?]...,4.768083043330647,1
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,agreeable,2,#Turing trying the eleventh doodle machine!!!,0.0,1
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,agreeable,3,via @user RT: @user: What is an open notebook? Advocate @user explains: http,0.0,1
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,agreeable,4,"#Turing and tomorrow, Hoare and Knuth among others...",0.0,0
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,agreeable,5,The Church (1988) Destination orig. http live http,0.0,1
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,stable,1,A top priority for Europe: secure the EU research and innovation budget! http,7.640487873272431,1
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,stable,2,#Turing trying the eleventh doodle machine!!!,0.0,1
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,stable,3,via @user RT: @user: What is an open notebook? Advocate @user explains: http,0.0,1
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,stable,4,"#Turing and tomorrow, Hoare and Knuth among others...",0.0,1
+1ed443b9-afda-47f8-a3cf-3341e174d9a3,stable,5,The Church (1988) Destination orig. http live http,0.0,0

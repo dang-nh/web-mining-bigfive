@@ -1,0 +1,10 @@
+{
+  "dataset": "PAN 2015 Author Profiling",
+  "language": "es",
+  "seed": 42,
+  "exported_at": "2026-01-19T13:43:27.206461Z",
+  "generated_by": "export_splits_to_csv.py",
+  "train_count": 131,
+  "dev_count": 19,
+  "test_count": 38
+}

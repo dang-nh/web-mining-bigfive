@@ -24,8 +24,6 @@ wheels/
 *.env
 
 data/raw/
-data/
-data/
 *.parquet
 *.pkl
 *.zip
