@@ -33,6 +33,10 @@ from src.models.tfidf_ridge import TfidfRidgeModel
 from src.ir.bm25 import BM25Index
 from src.ir.evidence import TRAIT_QUERIES
 from src.recsys.hashtag_recsys import HashtagRecommender
+from src.recsys.gnn_recsys import PersonalityLightGCN
+import torch
+import pickle
+
 
 # Page config
 st.set_page_config(
@@ -340,6 +344,35 @@ def load_recommender():
         return None
 
 
+
+@st.cache_resource
+def load_gnn_model():
+    """Load LightGCN model and inference artifacts."""
+    try:
+        model_path = MODELS_DIR / "gnn_lightgcn.pt"
+        inference_path = MODELS_DIR / "gnn_inference.pt"
+        mapping_path = MODELS_DIR / "gnn_mappings.pkl"
+        
+        if not model_path.exists() or not inference_path.exists() or not mapping_path.exists():
+            return None, None, None
+            
+        # Load Model
+        device = "cpu" # Inference on CPU is fine for small matrix
+        model = PersonalityLightGCN.load(model_path, device=device)
+        
+        # Load Artifacts
+        artifacts = torch.load(inference_path, map_location=device)
+        
+        # Load Mappings
+        with open(mapping_path, "rb") as f:
+            mappings = pickle.load(f)
+            
+        return model, artifacts, mappings
+    except Exception as e:
+        st.warning(f"Could not load GNN model: {e}")
+        return None, None, None
+
+
 def create_radar_chart(traits: dict):
     """Create an interactive radar chart using Plotly."""
     categories = [TRAIT_ICONS[t] + " " + t.capitalize() for t in traits.keys()]
@@ -490,6 +523,10 @@ def display_trait_card(trait: str, score: float):
 
 
 def main():
+    # Initialize session state for input text
+    if 'input_text' not in st.session_state:
+        st.session_state.input_text = ""
+    
     # Header
     st.markdown('<h1 class="main-header">🧠 Big Five Personality Analyzer</h1>', unsafe_allow_html=True)
     st.markdown('<p class="sub-header">Analyze personality traits from social media posts using Machine Learning + Information Retrieval</p>', unsafe_allow_html=True)
@@ -520,6 +557,15 @@ def main():
             value=TOP_K_RECS,
             help="Number of hashtags to recommend"
         )
+        
+        # Recommender Selection
+        recommender_type = st.radio(
+            "Recommender System",
+            ["Content-Based (Standard)", "GNN (LightGCN)"],
+            help="Choose the recommendation algorithm."
+        )
+        
+
         
         st.divider()
         
@@ -553,14 +599,19 @@ def main():
         
         input_text = st.text_area(
             "Posts",
+            value=st.session_state.input_text,
             height=200,
             placeholder="Enter tweets or posts here, one per line...\n\nExample:\nJust finished reading an amazing book about philosophy! Mind = blown 🤯\nHad the best time at the party with friends tonight! 🎉\nNeed to organize my schedule for next week, feeling productive 📋\nReally appreciate everyone who helped me today, you're all amazing!\nKeeping calm and focused despite the chaos around me 🧘",
             label_visibility="collapsed",
+            key="text_area_input",
         )
+        
+        # Sync text area to session state
+        st.session_state.input_text = input_text
         
         # Example posts button
         if st.button("📋 Load Example Posts"):
-            input_text = """Just finished reading an amazing book about philosophy! Mind = blown 🤯
+            st.session_state.input_text = """Just finished reading an amazing book about philosophy! Mind = blown 🤯
 Had the best time at the party with friends tonight! 🎉
 Need to organize my schedule for next week, feeling productive 📋
 Really appreciate everyone who helped me today, you're all amazing!
@@ -688,20 +739,58 @@ Meditation helped me stay centered through a stressful day"""
             evidence = retrieve_temp_evidence(temp_index, top_k=top_k_evidence)
             
             # Get recommendations
-            recommender = load_recommender()
             recommendations = []
-            if recommender:
-                try:
-                    recommendations = recommender.recommend_personality_aware(
-                        text_concat,
-                        predicted_traits,
-                        top_k=top_k_recs,
-                    )
-                except Exception:
+            
+            if recommender_type == "GNN (LightGCN)":
+                gnn_model, gnn_artifacts, gnn_mappings = load_gnn_model()
+                if gnn_model and gnn_artifacts and gnn_mappings:
+                    # GNN Inference
                     try:
-                        recommendations = recommender.recommend_popularity(top_k=top_k_recs)
+                        # 1. Prepare User Vector
+                        # Traits tensor (1, 5)
+                        traits_vector = [predicted_traits[t] for t in TRAIT_NAMES]
+                        traits_tensor = torch.tensor([traits_vector], dtype=torch.float32)
+                        
+                        # Project personality
+                        with torch.no_grad():
+                            p_emb = gnn_model.personality_proj(traits_tensor) # (1, dim)
+                            
+                        # Combine with mean base embedding
+                        mean_base = gnn_artifacts["mean_user_base_embedding"].unsqueeze(0) # (1, dim)
+                        user_emb = mean_base + p_emb
+                        
+                        # 2. Compute Scores
+                        final_item_embeddings = gnn_artifacts["final_item_embeddings"] # (num_items, dim)
+                        scores = torch.matmul(user_emb, final_item_embeddings.t()).squeeze(0) # (num_items,)
+                        
+                        # 3. Rank
+                        top_indices = torch.argsort(scores, descending=True)[:top_k_recs]
+                        
+                        # 4. Map to strings
+                        idx_to_hashtag = gnn_mappings["idx_to_hashtag"]
+                        recommendations = [idx_to_hashtag[i.item()] for i in top_indices if i.item() in idx_to_hashtag]
+                        
+                    except Exception as e:
+                        st.warning(f"GNN Inference failed: {e}. Falling back to standard recommender.")
+                        recommender_type = "Content-Based (Standard)" # Fallback flag
+                else:
+                    st.warning("GNN model files not found. Using standard recommender.")
+                    recommender_type = "Content-Based (Standard)" # Fallback flag
+
+            if recommender_type == "Content-Based (Standard)":
+                recommender = load_recommender()
+                if recommender:
+                    try:
+                        recommendations = recommender.recommend_personality_aware(
+                            text_concat,
+                            predicted_traits,
+                            top_k=top_k_recs,
+                        )
                     except Exception:
-                        pass
+                        try:
+                            recommendations = recommender.recommend_popularity(top_k=top_k_recs)
+                        except Exception:
+                            pass
         
         # Success message
         st.success("✅ Analysis Complete!")
@@ -780,14 +869,21 @@ Meditation helped me stay centered through a stressful day"""
             for trait in TRAIT_NAMES:
                 with st.expander(f"{TRAIT_ICONS[trait]} **{trait.upper()}** (score: {predicted_traits[trait]:.2f})"):
                     trait_evidence = evidence.get(trait, [])
-                    if trait_evidence:
-                        for i, item in enumerate(trait_evidence[:3]):
+                    # Filter out zero-score evidence
+                    relevant_evidence = [item for item in trait_evidence if item['score'] > 0]
+                    if relevant_evidence:
+                        for i, item in enumerate(relevant_evidence[:3]):
                             st.markdown(f"""
                             <div class="evidence-card {trait}">
                                 <div class="evidence-text">"{item['tweet']}"</div>
                                 <div class="evidence-score">Relevance: {item['score']:.3f}</div>
                             </div>
                             """, unsafe_allow_html=True)
+                    elif trait_evidence:
+                        # Show sample posts if no relevant keywords found
+                        st.info(f"No posts contain keywords for {trait}. Sample posts:")
+                        for i, item in enumerate(trait_evidence[:2]):
+                            st.markdown(f'> "{item["tweet"]}"')
                     else:
                         st.info("No strong evidence found for this trait.")
         

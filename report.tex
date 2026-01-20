@@ -26,7 +26,7 @@
 \maketitle
 
 \begin{abstract}
-Hashtag recommendation is a pivotal task in social media mining, serving as a bridge between user-generated content and information retrieval. However, traditional approaches often suffer from the ''cold-start'' problem and neglect the latent psychological drivers—specifically personality traits—that influence tagging behavior. This paper presents a comprehensive framework for Hashtag Recommendation that integrates the Big Five personality traits into both heuristic and deep learning models. We formally define the problem and propose two key contributions: (1) A **Hybrid Re-ranking Model** that fuses Content-based filtering, Popularity priors, and Multi-order Association Rules with a novel Personality Alignment score; (2) A **Personality-Enhanced LightGCN**, which modifies the graph convolution initialization to propagate psychological signals through the user-item interaction graph. Extensive experiments on the PAN 2015 Twitter dataset, using a strict leakage-free protocol, demonstrate that our hybrid strategy achieves a state-of-the-art MAP@10 of 27.8\%, while personality injection improves GNN performance by over 19\%.
+Hashtag recommendation is a pivotal task in social media mining, serving as a bridge between user-generated content and information retrieval. However, traditional approaches often suffer from the ''cold-start'' problem and neglect the latent psychological drivers—specifically personality traits—that influence tagging behavior. This paper presents a comprehensive framework for Hashtag Recommendation that integrates the Big Five personality traits into both heuristic and deep learning models. We formally define the problem and propose two key contributions: (1) A **Hybrid Re-ranking Model** that fuses Content-based filtering, Popularity priors, and Multi-order Association Rules with a novel Personality Alignment score; (2) A **Personality-Enhanced LightGCN**, which modifies the graph convolution initialization to propagate psychological signals through the user-item interaction graph. Extensive experiments on the PAN 2015 Twitter dataset, using a strict leakage-free protocol, demonstrate that our hybrid strategy achieves a MAP@10 of 27.8\%, significantly outperforming all baselines, while personality injection improves GNN performance by over 19\%.
 
 The source code and performance logs are available at: \url{https://github.com/dang-nh/web-mining-bigfive}. The dataset used is the PAN 2015 Author Profiling corpus available at: \url{https://zenodo.org/records/3745945}.
 
@@ -542,10 +542,12 @@ Content-Based & 0.068 & 0.194 & 0.094 & Dependent on literal text matches. \\
 GNN (Basic LightGCN) & 0.111 & 0.331 & 0.154 & Captures latent interactions. \\
 \textbf{GNN + Personality} & \textbf{0.123} & 0.360 & 0.183 & \textbf{+19\% gain} via personality injection. \\
 \midrule
-\textbf{Hybrid (Co-occurrence)} & 0.088 & \textbf{0.451} & \textbf{0.278} & \textbf{SOTA}. Rules capture strong priors. \\
+\textbf{Hybrid (Co-occurrence)} & 0.088 & \textbf{0.451} & \textbf{0.278} & \textbf{Best}*. Rules capture strong priors. \\
 Ensemble (RRF) & 0.128 & 0.377 & 0.202 & Diluted by lower-precision GNN scores. \\
 \bottomrule
 \end{tabular}
+\\
+\footnotesize{*Since PAN 2015 does not have a standard hashtag recommendation benchmark, we compare our method against standard baselines (Popularity, Content-based, LightGCN) implemented in the same setting.}
 \end{table}
 
 \textbf{Analysis:}

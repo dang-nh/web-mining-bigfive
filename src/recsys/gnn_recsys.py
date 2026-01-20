@@ -99,6 +99,56 @@ class PersonalityLightGCN(nn.Module):
         scores = torch.matmul(users_emb, final_item_emb.t()) # (batch, num_items)
         return scores
 
+    def save(self, path):
+        """Save model state and configuration."""
+        config = {
+            "num_users": self.num_users,
+            "num_items": self.num_items,
+            "embedding_dim": self.embedding_dim,
+            "n_layers": self.n_layers,
+            "dropout": self.dropout,
+            "use_personality": self.use_personality,
+            "use_content": self.use_content
+        }
+        
+        # Save state dict
+        torch.save({
+            "config": config,
+            "state_dict": self.state_dict(),
+        }, path)
+        
+    @classmethod
+    def load(cls, path, device="cpu"):
+        """Load model from checkpoint."""
+        checkpoint = torch.load(path, map_location=device)
+        config = checkpoint["config"]
+        
+        # We need to initialize with empty features first, then load state dict
+        # The state dict contains the registered buffers 'user_personality' and 'item_content'
+        
+        # Create dummy features for initialization if needed (will be overwritten by load_state_dict)
+        user_feats = None
+        if config["use_personality"]:
+            # Need to know dim from saved state or config? 
+            # It's in the state_dict['user_personality']
+            pass # Constructor handles None, but we need to ensure shapes match if we pass None.
+            # Actually, standard pattern: init with None, load state dict populates buffers.
+            
+        model = cls(
+            num_users=config["num_users"],
+            num_items=config["num_items"],
+            embedding_dim=config["embedding_dim"],
+            n_layers=config["n_layers"],
+            dropout=config["dropout"],
+            user_personality_features=None, # Will be loaded from state_dict
+            item_content_features=None      # Will be loaded from state_dict
+        )
+        
+        model.load_state_dict(checkpoint["state_dict"])
+        model.to(device)
+        model.eval()
+        return model
+
 
 class GNNTrainer:
     def __init__(self, model, optimizer, device):
@@ -196,6 +246,13 @@ class GNNTrainer:
             total_loss += loss.item()
             
         return total_loss / n_batches
+
+    def save_checkpoint(self, path):
+        """Save model checkpoint via the model's save method."""
+        if hasattr(self.model, "save"):
+            self.model.save(path)
+        else:
+            torch.save(self.model.state_dict(), path)
 
 
 class PersonalitySimGCL(nn.Module):
